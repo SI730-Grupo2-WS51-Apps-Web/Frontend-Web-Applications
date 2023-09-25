@@ -1,5 +1,5 @@
-import '@/public/styles/dark_theme.css'
-import '@/public/styles/light_theme.css'
+import '@/shared/styles/dark_theme.css'
+import '@/shared/styles/light_theme.css'
 
 const rootElement = document.documentElement;
 const modes = {false:"light", true:"dark"}
@@ -18,6 +18,30 @@ const cssVariables = {
         '--secondary-text': '#CCCCCC',
     },
 };
+
+class ObserverPattern {
+    constructor() {
+        this.observers = [];
+    }
+
+    subscribe(observerFunction) {
+        this.observers.push(observerFunction);
+    }
+
+    unsubscribe(observer) {
+        const index = this.observers.indexOf(observer);
+        if (index !== -1) {
+            this.observers.splice(index, 1);
+        }
+    }
+
+    notify() {
+        this.observers.forEach((observer) => {
+            observer(isDarkMode);
+        });
+    }
+};
+const darkModeNotifications = new ObserverPattern();
 
 export default {
     isDarkMode,
@@ -45,14 +69,16 @@ export default {
                     styleElement.disabled = false;
                 });
             }
-
+            darkModeNotifications.notify();
         },
         getCurrentMode(){
             return modes[isDarkMode];
+        },
+        watchDarkMode(functionToCall){
+            darkModeNotifications.subscribe(functionToCall)
+        },
+        unwatchDarkMode(functionToCall){
+            darkModeNotifications.unsubscribe(functionToCall)
         }
     },
-    created() {
-
-
-    }
 }
