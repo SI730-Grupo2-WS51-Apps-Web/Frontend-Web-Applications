@@ -10,16 +10,12 @@ const cssVariables = {
         '--container': '#CECECE',
         '--primary-text': '#101010',
         '--secondary-text': '#1C1C1C',
-        '--navbar':  '#FAFAFA',
-        '--navbar-border': '#FFFFFF',
     },
     true: {
         '--background': '#0D0D0D',
         '--container': '#1D1D1D',
         '--primary-text': '#EAEAEA',
         '--secondary-text': '#CCCCCC',
-        '--navbar':  '#080808',
-        '--navbar-border': '#040404',
     },
 };
 
