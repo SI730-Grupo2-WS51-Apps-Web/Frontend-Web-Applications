@@ -1,20 +1,34 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from 'vue-router';
 import navbarComponent from "@/public/components/navbar.component.vue";
+import footerComponent from "@/public/components/footer.component.vue";
+export default {
+  components:{
+    navbarComponent,
+    footerComponent,
+    RouterLink,
+    RouterView,
+  },
+  data(){
+    return{
+      uwu: "",
+    }
+  },
+  methods:{
+    userClicked(){
+      console.log("uwu");
+    },
+
+  }
+}
 </script>
 
 <template>
     <header>
-      <navbarComponent/>
+      <navbarComponent @user="userClicked"/>
     </header>
     <main>
-      <div class="wrapper">
 
-        <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-        </nav>
-      </div>
       <RouterView />
     </main>
     <footer>

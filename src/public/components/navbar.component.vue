@@ -1,20 +1,13 @@
 <script>
 import { RouterLink } from 'vue-router';
 import stylesService from "@/public/styles/styles.service";
+import {getProductListLike} from "@/product/services/products.service";
+
 export default {
   methods: {
     alterModeClicked() {
       stylesService.methods.alterMode();
-      console.log(stylesService.methods.getCurrentMode());
       this.currentMode = stylesService.methods.getCurrentMode();
-      if(this.currentMode){
-        document.body.classList.remove('dark-theme')
-        document.body.classList.add('light-theme')
-      }
-      else{
-        document.body.classList.remove('light-theme')
-        document.body.classList.add('dark-theme')
-      }
     },
     userClicked() {
       this.$emit('user')
@@ -24,11 +17,28 @@ export default {
     },
     logoClicked(){
       this.$emit('logo');
+    },
+    searchBarClicked(){
+      this.$emit('search', this.selectedProduct);
+    },
+    productSelected(){
+      this.$emit('product', this.selectedProduct);
+    },
+    filterProducts(){
+      getProductListLike(this.selectedProduct)
+          .then((response)=>{
+            this.productsFiltered = response;
+          })
+          .catch((error)=>{
+            console.log("Error al obtener la lista de productos filtrados", error)
+            this.productsFiltered = null;
+          })
     }
   },
   data() {
     return {
-      searchText: "",
+      productsFiltered: null,
+      selectedProduct: null,
       currentMode: stylesService.modes[stylesService.isDarkMode],
     };
   },
@@ -39,19 +49,26 @@ export default {
 <template>
   <pv-toolbar id="mainToolbar" class="navbar">
     <template #start>
-      <pv-image src="/images/logos/main/logo.png" alt="logo" @click="logoClicked" />
+      <pv-image class="logo" src="/images/logos/main/logo.png" alt="logo" @click="logoClicked" />
     </template>
     <template #center>
-      <span class="p-input-icon-right">
-        <i class="pi pi-search" />
-        <pv-input-text v-model="searchText" placeholder="Search" size="large"/>
-      </span>
+      <pv-autocomplete
+          v-model="selectedProduct"
+          optionLabel="name"
+          :suggestions="productsFiltered"
+          @complete="filterProducts"
+          placeholder="Busca un producto"
+          forceSelection
+          @keydown.enter="searchBarClicked"
+          @itemSelect="productSelected"
+      />
+      <i class="pi pi-search" @click="searchBarClicked"/>
 
     </template>
-    <template #end>
-      <pv-image :src="`/images/navbar-icons/${this.currentMode}/mode.svg`" :alt="`${this.currentMode}`" @click="alterModeClicked" />
-      <pv-image :src="`/images/navbar-icons/${this.currentMode}/cart.svg`" :alt="`${this.currentMode}`" @click="cartClicked" />
-      <pv-image :src="`/images/navbar-icons/${this.currentMode}/profile.svg`" :alt="`${this.currentMode}`" @click="userClicked" />
+    <template #end class="gap-3">
+      <pv-image class="navbar-icon" :src="`/images/navbar-icons/${this.currentMode}/mode.svg`" :alt="`${this.currentMode}`" @click="alterModeClicked" />
+      <pv-image class="navbar-icon" :src="`/images/navbar-icons/${this.currentMode}/cart.svg`" :alt="`${this.currentMode}`" @click="cartClicked" />
+      <pv-image class="navbar-icon" :src="`/images/navbar-icons/${this.currentMode}/profile.svg`" :alt="`${this.currentMode}`" @click="userClicked" />
     </template>
   </pv-toolbar>
 </template>

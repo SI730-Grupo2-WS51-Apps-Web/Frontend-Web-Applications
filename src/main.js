@@ -12,6 +12,7 @@ import Toolbar from "primevue/toolbar";
 import Divider from 'primevue/divider';
 import InputText from 'primevue/inputtext';
 import Image from "primevue/image";
+import AutoComplete from "primevue/autocomplete";
 
 
 createApp(App)
@@ -24,5 +25,6 @@ createApp(App)
     .component('pv-divider', Divider)
     .component('pv-input-text',InputText)
     .component('pv-image', Image)
+    .component('pv-autocomplete',AutoComplete)
     .mount('#app')
 
