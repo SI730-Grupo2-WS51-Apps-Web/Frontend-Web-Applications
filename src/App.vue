@@ -10,29 +10,39 @@ export default {
     RouterView,
   },
   data(){
-    return{
-      uwu: "",
-    }
+    return{}
   },
   methods:{
     userClicked(){
-      console.log("uwu");
+      console.log("user");
     },
-
+    logoClicked() {
+      console.log("logo");
+    },
+    cartClicked(){
+      console.log("cart");
+    },
+    search(data){
+      console.log("searching ", data);
+    },
+    showProduct(data){
+      console.log("showing ",data)
+    }
   }
 }
 </script>
 
 <template>
     <header>
-      <navbarComponent @user="userClicked"/>
+      <navbarComponent @logo="logoClicked" @cart="cartClicked" @user="userClicked" @search="search" @product="showProduct"/>
+      <ScrollTop />
     </header>
     <main>
 
       <RouterView />
     </main>
     <footer>
-
+      <footer-component/>
     </footer>
 
 
