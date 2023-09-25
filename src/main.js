@@ -13,10 +13,11 @@ import Divider from 'primevue/divider';
 import InputText from 'primevue/inputtext';
 import Image from "primevue/image";
 import AutoComplete from "primevue/autocomplete";
+import Tree from "primevue/tree";
+import Card from "primevue/card";
 
 
 createApp(App)
-    .use(router)
     .use(PrimeVue, {ripple:true})
     .component('pv-dialog', Dialog)
     .component('pv-button', Button)
@@ -26,5 +27,8 @@ createApp(App)
     .component('pv-input-text',InputText)
     .component('pv-image', Image)
     .component('pv-autocomplete',AutoComplete)
+    .component('pv-tree',Tree)
+    .component('pv-card',Card)
+    .use(router)
     .mount('#app')
 
