@@ -1,7 +1,7 @@
 <script>
 import { RouterLink } from 'vue-router';
 import stylesService from "@/shared/styles/styles.service";
-import accountService from "@/account/services/account.service";
+import accountService from "@/account/services/account-cache.service";
 import {getUserImageByUser} from "@/shared/services/image.service";
 
 export default {
@@ -65,9 +65,19 @@ export default {
   watch: {
     openClicked:{
       handler(newOpenClicked, oldOpenClicked){
-        this.isOpen = true;
+        if (newOpenClicked) {
+          this.isOpen = true;
+        }
+
       },
       immediate: true,
+    },
+    isOpen:{
+      handler(newIsOpen, oldIsOpen){
+        if(!newIsOpen){
+          this.$emit("closed");
+        }
+      }
     }
   }
 }
