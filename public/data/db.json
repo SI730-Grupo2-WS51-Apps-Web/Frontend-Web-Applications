@@ -1360,7 +1360,7 @@
       },
       "login": {
         "email": "annalucia@gmail.com",
-        "password": "uwu"
+        "password": "1234"
       },
       "shipping": {
         "address": "Calle Parque Osores 123",
@@ -1450,9 +1450,9 @@
     {
       "title":"Follow Us",
       "content": [
-        {"label": "Tienda","to":  "www.facebook.com/", "img":"facebook"},
-        {"label": "Contactanos", "to": "www.instagram.com", "img":"instagram"},
-        {"label": "Categorias", "to": "www.tiktok.com", "img":"tiktok"}
+        {"label": "Tienda","to":  "facebook", "img":"facebook"},
+        {"label": "Contactanos", "to": "instagram", "img":"instagram"},
+        {"label": "Categorias", "to": "tiktok", "img":"tiktok"}
       ]
     }
   ]

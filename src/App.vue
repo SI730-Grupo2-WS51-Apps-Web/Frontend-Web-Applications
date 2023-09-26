@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router';
 import navbarComponent from "@/public/components/navbar.component.vue";
 import footerComponent from "@/public/components/footer.component.vue";
 import profileMiniComponent from "@/account/components/profile-mini.component.vue";
-import accountService from "@/account/services/account.service";
+import accountService from "@/account/services/account-cache.service";
 export default {
   components:{
     navbarComponent,
@@ -22,18 +22,24 @@ export default {
   methods:{
     userClicked(){
       if(this.userInfo){
-        console.log("user");
-        this.littleProfileOpened = !this.littleProfileOpened;
+        console.log("El menu del perfil fue abierto");
+        this.littleProfileOpened = true;
       }
       else{
+        console.log("El usuario necesita iniciar sesion para abrir el perfil");
         this.$router.push("/login");
       }
     },
     logoClicked() {
+      this.$router.push("/");
       console.log("logo");
     },
     cartClicked(){
       console.log("cart");
+    },
+    littleProfileClosed(){
+      console.log("El menu del perfil fue cerrado");
+      this.littleProfileOpened =false;
     },
     search(data){
       console.log("searching ", data);
@@ -47,6 +53,9 @@ export default {
     logOut(){
       console.log("loggin out...")
       accountService.methods.logOut();
+    },
+    logged(){
+      this.$router.push("/account");
     }
   },
   created() {
@@ -58,13 +67,13 @@ export default {
 <template>
     <header>
       <navbarComponent @logo="logoClicked" @cart="cartClicked" @user="userClicked" @search="search" @product="showProduct"/>
-      <profileMiniComponent :open-clicked="littleProfileOpened" @account="myAccount" @orders="myAccount" @logout="logOut"/>
+      <profileMiniComponent :open-clicked="littleProfileOpened" @account="myAccount" @orders="myAccount" @logout="logOut" @closed="littleProfileClosed"/>
     </header>
     <main>
-      <ScrollTop />
+      <pv-scroll-top />
       <div class="wrapper">
         <div class="header-area"/>
-        <RouterView />
+        <RouterView @logged="logged"/>
       </div>
     </main>
     <footer>

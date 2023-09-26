@@ -15,6 +15,8 @@ import AutoComplete from "primevue/autocomplete";
 import Tree from "primevue/tree";
 import Card from "primevue/card";
 import Avatar from "primevue/avatar";
+import ScrollTop from "primevue/scrolltop";
+import Password from "primevue/password";
 
 
 createApp(App)
@@ -29,6 +31,8 @@ createApp(App)
     .component('pv-tree',Tree)
     .component('pv-card',Card)
     .component('pv-avatar', Avatar)
+    .component('pv-password',Password)
+    .component('pv-scroll-top',ScrollTop)
     .use(router)
     .mount('#app')
 
