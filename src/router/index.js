@@ -31,6 +31,15 @@ const router = createRouter({
     {
       path: '/tiktok',
     },
+    {
+      path: '/404',
+      name: 'Page not Found',
+      component: () => import('../public/components/404.component.vue')
+    },
+    {
+      path: '/:catchAll(.*)',
+      redirect: '/404'
+    }
   ]
 })
 
