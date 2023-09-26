@@ -20,7 +20,6 @@ class ObserverPattern {
     }
     async logIn(mail, password) {
         let response = await searchUserByLoginData(mail, password);
-        console.log(response)
         if(response !== undefined && response){
             userInfo = response;
             this.notifyChange();

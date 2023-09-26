@@ -22,23 +22,19 @@ export default {
   methods:{
     userClicked(){
       if(this.userInfo){
-        console.log("El menu del perfil fue abierto");
         this.littleProfileOpened = true;
       }
       else{
-        console.log("El usuario necesita iniciar sesion para abrir el perfil");
         this.$router.push("/login");
       }
     },
     logoClicked() {
       this.$router.push("/");
-      console.log("logo");
     },
     cartClicked(){
       console.log("cart");
     },
     littleProfileClosed(){
-      console.log("El menu del perfil fue cerrado");
       this.littleProfileOpened =false;
     },
     search(data){
@@ -48,10 +44,10 @@ export default {
       console.log("showing ",data)
     },
     myAccount(){
+      this.$router.push("/account");
       console.log("my account")
     },
     logOut(){
-      console.log("loggin out...")
       accountService.methods.logOut();
     },
     logged(){
@@ -86,8 +82,5 @@ export default {
 <style scoped>
 main{
   margin: 10px;
-}
-.content-margin{
-  padding: 5rem;
 }
 </style>
