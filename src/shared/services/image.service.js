@@ -23,6 +23,7 @@ async function getImageList(){
 }
 async function getUserImageByUser(userData) {
     try {
+        if(userData===null || userData === undefined) {userData = {}; userData.image="0";};
         const imageResponse = await http.get(`/imageList/${userData.image}`);
         const imageData = imageResponse.data;
         console.log(imageData);
