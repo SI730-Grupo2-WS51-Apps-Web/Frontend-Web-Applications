@@ -16,12 +16,18 @@ export default {
   data(){
     return{
       littleProfileOpened: false,
+      userInfo: undefined,
     }
   },
   methods:{
     userClicked(){
-      console.log("user");
-      this.littleProfileOpened = !this.littleProfileOpened;
+      if(this.userInfo){
+        console.log("user");
+        this.littleProfileOpened = !this.littleProfileOpened;
+      }
+      else{
+        this.$router.push("/login");
+      }
     },
     logoClicked() {
       console.log("logo");
@@ -36,11 +42,15 @@ export default {
       console.log("showing ",data)
     },
     myAccount(){
-
+      console.log("my account")
     },
     logOut(){
-      accountService.logout();
+      console.log("loggin out...")
+      accountService.methods.logOut();
     }
+  },
+  created() {
+    this.userInfo = accountService.methods.watchUser((newUserInfo)=>{this.userInfo = newUserInfo})
   }
 }
 </script>
@@ -48,7 +58,7 @@ export default {
 <template>
     <header>
       <navbarComponent @logo="logoClicked" @cart="cartClicked" @user="userClicked" @search="search" @product="showProduct"/>
-      <profileMiniComponent :open-clicked="littleProfileOpened" @account="myAccount" @orders="myAccount" @logout="logout"/>
+      <profileMiniComponent :open-clicked="littleProfileOpened" @account="myAccount" @orders="myAccount" @logout="logOut"/>
     </header>
     <main>
       <ScrollTop />

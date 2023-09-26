@@ -7,14 +7,19 @@ import {getUserImageByUser} from "@/shared/services/image.service";
 export default {
   methods: {
     getUserInfo(newUserInfo){
-      this.userInfo = newUserInfo;
-      if(this.userInfo.personal.genre){
-        this.welcomeText = "Bienvenido"
+      if(newUserInfo){
+        this.userInfo = newUserInfo;
+        if(this.userInfo.personal.genre){
+          this.welcomeText = "Bienvenido"
+        }
+        else{
+          this.welcomeText = "Bienvenida"
+        }
+        this.updateImage();
       }
       else{
-        this.welcomeText = "Bienvenida"
+        this.isOpen=false;
       }
-      this.updateImage();
     },
     getMode(newDarkMode){
       this.isDarkMode = newDarkMode;
