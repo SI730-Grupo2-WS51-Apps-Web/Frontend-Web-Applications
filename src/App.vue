@@ -71,8 +71,8 @@ export default {
     </header>
     <main>
       <pv-scroll-top />
-      <div class="wrapper">
-        <div class="header-area"/>
+      <div class="header-area"/>
+      <div class="content-margin">
         <RouterView @logged="logged"/>
       </div>
     </main>
@@ -86,5 +86,8 @@ export default {
 <style scoped>
 main{
   margin: 10px;
+}
+.content-margin{
+  padding: 5rem;
 }
 </style>
