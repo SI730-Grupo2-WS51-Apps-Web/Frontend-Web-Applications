@@ -1,6 +1,6 @@
 <script>
 import { RouterLink } from 'vue-router';
-import stylesService from "@/public/styles/styles.service";
+import stylesService from "@/shared/styles/styles.service";
 import {getProductListLike} from "@/product/services/products.service";
 
 export default {

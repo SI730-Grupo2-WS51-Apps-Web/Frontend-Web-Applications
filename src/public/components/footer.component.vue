@@ -36,7 +36,7 @@ export default {
 
 
 <template>
-  <pv-toolbar id="footer" class="navbar w-full">
+  <pv-toolbar id="footer" class="footer w-full">
     <template #start>
       <div class="flex flex-justify-content flex-col w-full">
         <div class="flex flex-justify-content flex-row">
@@ -50,7 +50,7 @@ export default {
                    :key="itemIndex"
                    class="left-padding-1 flex flex-row"
               >
-                <pv-image v-if="item.img !== ''" :src="`public/images/social-networks/${this.currentMode}/${item.img}.png`" />
+                <pv-image v-if="item.img !== ''" :src="`public/images/social-networks/${this.currentMode}/${item.img}.svg`" class="footer-icons" />
                 <router-link :to="item.to" class="text">
                   {{ item.label }}
                 </router-link>
