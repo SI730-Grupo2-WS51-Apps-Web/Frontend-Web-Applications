@@ -108,25 +108,41 @@ export default {
         <template #title><div class="align-center text-4"> Información de Compras: </div></template>
         <template #content>
           <div class="text-1 little-margin-width">
-            <div class="flex-row flex-justify-content gap-1">
-              <div class="main-text">Direccion:</div>
-              <div class="text">{{this.userInfo.shipping.address}}</div>
+            <div v-if="this.userInfo.shipping.address">
+              <div class="flex-row flex-justify-content gap-1">
+                <div class="main-text">Direccion:</div>
+                <div class="text">{{this.userInfo.shipping.address}}</div>
+              </div>
+              <div class="flex-row flex-justify-content gap-1">
+                <div class="main-text">Distrito:</div>
+                <div class="text">{{this.userInfo.shipping.district}}</div>
+              </div>
+              <div class="flex-row flex-justify-content gap-1">
+                <div class="main-text">Provincia:</div>
+                <div class="text">{{this.userInfo.shipping.province}}</div>
+              </div>
             </div>
-            <div class="flex-row flex-justify-content gap-1">
-              <div class="main-text">Distrito:</div>
-              <div class="text">{{this.userInfo.shipping.district}}</div>
+            <div v-else>
+              <div class="flex-row flex-justify-content gap-1">
+                <div class="main-text">Direccion:</div>
+                <div class="text">Registrar su dirección</div>
+              </div>
             </div>
-            <div class="flex-row flex-justify-content gap-1">
-              <div class="main-text">Provincia:</div>
-              <div class="text">{{this.userInfo.shipping.province}}</div>
+            <div v-if="userInfo.payment.paymentMethod && userInfo.payment.MethodData">
+              <div class="flex-row flex-justify-content gap-1">
+                <div class="main-text">Metodo de Pago:</div>
+                <div class="text">{{this.userInfo.payment.paymentMethod}}</div>
+              </div>
+              <div class="flex-row flex-justify-content gap-1">
+                <div class="main-text">{{this.userInfo.payment.paymentMethod}}:</div>
+                <div class="text">{{this.userInfo.payment.MethodData.name}}</div>
+              </div>
             </div>
-            <div class="flex-row flex-justify-content gap-1">
-              <div class="main-text">Metodo de Pago:</div>
-              <div class="text">{{this.userInfo.payment.paymentMethod}}</div>
-            </div>
-            <div class="flex-row flex-justify-content gap-1">
-              <div class="main-text">{{this.userInfo.payment.paymentMethod}}:</div>
-              <div class="text">{{this.userInfo.payment.MethodData.name}}</div>
+            <div v-else>
+              <div class="flex-row flex-justify-content gap-1">
+                <div class="main-text">Metodo de Pago:</div>
+                <div class="text">Seleccionar</div>
+              </div>
             </div>
           </div>
         </template>
