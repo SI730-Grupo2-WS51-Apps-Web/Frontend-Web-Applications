@@ -6,7 +6,6 @@ import {getUserImageByUser} from "@/shared/services/image.service";
 export default {
   methods: {
     getUserInfo(newUserInfo){
-      console.log(newUserInfo)
       if(newUserInfo !== undefined && newUserInfo !== null && newUserInfo){
         this.userInfo = newUserInfo;
         if(this.userInfo.personal.genre){
@@ -26,19 +25,12 @@ export default {
       this.isDarkMode = newDarkMode;
       this.currentMode = stylesService.methods.getCurrentMode();
     },
-    updateImage(){
-      getUserImageByUser(this.userInfo)
-          .then((response)=>{this.profilePhoto = response; console.log("imagen del miniperfil actualizada")})
-          .catch((error)=>{console.log(error)})
-      ;
-    },
   },
   data() {
     return {
       userInfo: null,
       isDarkMode: false,
       currentMode: "light",
-      profilePhoto:"default.png",
       isUserLogged: false,
       welcomeText: "Bienvenido",
     };
@@ -46,25 +38,14 @@ export default {
   created() {
     this.userInfo = accountService.methods.watchUser(this.getUserInfo)
     this.isUserLogged = !!this.userInfo;
-    this.updateImage();
     stylesService.methods.watchDarkMode(this.getMode);
   },
-  watch: {
-    openClicked:{
-      handler(newOpenClicked, oldOpenClicked){
-        if (newOpenClicked) {
-          this.isOpen = true;
-        }
-      },
-      immediate: true,
-    },
-  }
 }
 </script>
 
 <template>
   <div class="account flex flex-col" v-if="this.isUserLogged">
-    <pv-avatar :image="`public/images/profile/${userInfo.image}`" class="mr-2" alt="Usuario.png" id="main-profile-avatar"/>
+    <pv-avatar :image="`public/images/profile/${userInfo.imageName}`" class="mr-2" alt="Usuario.png" id="main-profile-avatar"/>
     <div class="flex flex-row welcome-content text">
       <div id="accountWelcomeText">{{welcomeText}},</div>
       <div id="accountUserText">{{this.userInfo.personal.firstName}}</div>

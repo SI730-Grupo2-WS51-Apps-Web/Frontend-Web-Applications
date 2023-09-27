@@ -15,7 +15,6 @@ export default {
         else{
           this.welcomeText = "Bienvenida"
         }
-        this.updateImage();
       }
       else{
         this.isOpen=false;
@@ -24,12 +23,6 @@ export default {
     getMode(newDarkMode){
       this.isDarkMode = newDarkMode;
       this.currentMode = stylesService.methods.getCurrentMode();
-    },
-    updateImage(){
-      getUserImageByUser(this.userInfo)
-          .then((response)=>{this.profilePhoto = response; console.log("imagen del miniperfil actualizada")})
-          .catch((error)=>{console.log(error)})
-      ;
     },
     accountClicked(){
       this.$emit("account");
@@ -52,14 +45,12 @@ export default {
       userInfo: null,
       isDarkMode: false,
       currentMode: "light",
-      profilePhoto:"default.png",
       isOpen: false,
       welcomeText: "Bienvenido",
     };
   },
   created() {
     this.userInfo = accountService.methods.watchUser(this.getUserInfo)
-    this.updateImage();
     stylesService.methods.watchDarkMode(this.getMode);
   },
   watch: {
@@ -88,7 +79,7 @@ export default {
     <template #header></template>
     <template #default>
       <div class="flex flex-col">
-        <pv-avatar :image="`public/images/profile/${userInfo.image}`" class="mr-2" alt="Usuario.png" id="mini-profile-avatar"/>
+        <pv-avatar :image="`public/images/profile/${userInfo.imageName}`" class="mr-2" alt="Usuario.png" id="mini-profile-avatar"/>
         <div id="welcomeText" style="margin: 2px">{{welcomeText}}</div>
         <div id="userText" style="margin: 2px">{{this.userInfo.personal.firstName}}</div>
         <div class="flex flex-col align-left">

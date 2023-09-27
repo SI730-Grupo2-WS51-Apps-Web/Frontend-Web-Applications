@@ -11,7 +11,7 @@ async function getUserByLoginData(email, password){
         const userData = response.data;
         if(userData !== undefined){
             if(userData.length > 0){
-                userData[0].image = await getImageURLbyImageId(userData[0].image);
+                userData[0].imageName = await getImageURLbyImageId(userData[0].image);
                 userData[0].login.password = "***********";
                 const paymentMethodResponse = await http.get(`/paymentMethods?id=${userData[0].payment.selectedMethod}`);
                 const paymentData = paymentMethodResponse.data;

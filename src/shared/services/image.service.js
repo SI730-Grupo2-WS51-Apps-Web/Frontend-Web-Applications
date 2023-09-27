@@ -26,7 +26,6 @@ async function getUserImageByUser(userData) {
         if(userData===null || userData === undefined) {userData = {}; userData.image="0";};
         const imageResponse = await http.get(`/imageList/${userData.image}`);
         const imageData = imageResponse.data;
-        console.log(imageData);
         return imageData.location;
     } catch (error) {
         console.error("Error al obtener la imagen del usuario:", error);
