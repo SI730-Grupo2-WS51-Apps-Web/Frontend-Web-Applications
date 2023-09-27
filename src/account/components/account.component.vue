@@ -33,12 +33,6 @@ export default {
       ;
     },
   },
-  props: {
-    openClicked: {
-      type:Boolean,
-      required: true,
-    }
-  },
   data() {
     return {
       userInfo: null,
@@ -70,7 +64,7 @@ export default {
 
 <template>
   <div class="account flex flex-col" v-if="this.isUserLogged">
-    <pv-avatar :image="`public/images/profile/${userInfo.image}.png`" class="mr-2" alt="Usuario.png" id="main-profile-avatar"/>
+    <pv-avatar :image="`public/images/profile/${userInfo.image}`" class="mr-2" alt="Usuario.png" id="main-profile-avatar"/>
     <div class="flex flex-row welcome-content text">
       <div id="accountWelcomeText">{{welcomeText}},</div>
       <div id="accountUserText">{{this.userInfo.personal.firstName}}</div>
