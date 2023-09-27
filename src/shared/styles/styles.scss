@@ -9,7 +9,6 @@ header{
     top: 0px;
     position: absolute;
     width: 100%;
-
 }
 //navbar:
 .navbar div {
@@ -27,12 +26,26 @@ header{
     width:30rem
 }
 
+.main-text {
+    white-space: nowrap;
+    font-family: 'Montserrat Light', sans-serif;
+}
+.text-1{ font-size: 1.2rem; }
+.text-2{ font-size: 1.4rem; }
+.text-3{ font-size: 1.6rem; }
+.text-4 { font-size: 1.8rem; }
+.text-5 { font-size: 2.0rem; }
+.text-6 { font-size: 2.2rem; }
+.text-7 { font-size: 2.4rem; }
+.text-8 { font-size: 2.6rem; }
+.text-9 { font-size: 2.8rem; }
+.text-10 { font-size: 3rem; }
 
 .text {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: 'Montserrat Light', sans-serif;
 }
 .flex{
     display: flex;
@@ -40,6 +53,7 @@ header{
     align-items: center;
 }
 .flex-justify-content{
+    display: flex;
     justify-content: space-between;
 }
 .flex-col{
@@ -63,7 +77,11 @@ header{
 .header-area{
     min-height:100px;
 }
-
+.profile-data-card{
+    background-color: var(--surface-c);
+    width: 30rem;
+    border-radius: 2rem;
+}
 //Links:
 #link{
     color: var(--akira-red);
@@ -74,9 +92,27 @@ header{
     width:20rem
 }
 
+.content-margin{
+    padding: 5rem;
+}
+.little-margin{
+    padding: 1rem;
+}
+.little-margin-width{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .gap-1{ gap: 0.5rem; }
 .gap-2{ gap: 1rem; }
 .gap-3{ gap: 1.5rem; }
+.gap-4{ gap: 2rem; }
+.gap-5 { gap: 2.5rem; }
+.gap-6 { gap: 3rem; }
+.gap-7 { gap: 3.5rem; }
+.gap-8 { gap: 4rem; }
+.gap-9 { gap: 4.5rem; }
+.gap-10 { gap: 5rem; }
 
 .right-padding-1{ padding-right: 1rem; }
 .right-padding-2{ padding-right: 2rem; }
@@ -133,6 +169,12 @@ header{
     text-align: right;
     justify-content: right;
 }
+.align-center{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
 .payment-image img {
     height:1rem;
     width: auto;
@@ -142,8 +184,9 @@ a{
     color: var(--text-color)
 }
 h2{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-family: 'Montserrat Light', sans-serif;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .p-avatar img{
     object-fit: cover;
