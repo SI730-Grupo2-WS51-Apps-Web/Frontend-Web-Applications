@@ -1380,12 +1380,113 @@
           "id": 1
         }
       }
+    },
+    {
+      "id": 4,
+      "image": 0,
+      "personal": {
+        "firstName": "UwU",
+        "lastName": "UwU",
+        "phone": 976584321,
+        "genre": {
+          "name": "Masculino",
+          "value": true
+        }
+      },
+      "login": {
+        "email": "uwu@uwu.uwu",
+        "password": "1234"
+      },
+      "shipping": {
+        "address": "",
+        "district": "",
+        "province": ""
+      },
+      "payment": {
+        "selectedMethod": 0,
+        "card": {
+          "number": "",
+          "name": "",
+          "month": "",
+          "year": "",
+          "cvv": 0
+        },
+        "wallet": {
+          "id": 0
+        }
+      }
+    },
+    {
+      "id": 5,
+      "image": 0,
+      "personal": {
+        "firstName": "a",
+        "lastName": "a",
+        "phone": 997096440
+      },
+      "login": {
+        "email": "a@a.a",
+        "password": "a"
+      },
+      "shipping": {
+        "address": "",
+        "district": "",
+        "province": ""
+      },
+      "payment": {
+        "selectedMethod": 0,
+        "card": {
+          "number": "",
+          "name": "",
+          "month": "",
+          "year": "",
+          "cvv": 0
+        },
+        "wallet": {
+          "id": 0
+        }
+      }
+    },
+    {
+      "id": 6,
+      "image": 0,
+      "personal": {
+        "firstName": "Uwu",
+        "lastName": "Uwu",
+        "phone": 985674312,
+        "genre": {
+          "name": "Femenino",
+          "value": false
+        }
+      },
+      "login": {
+        "email": "uwu@uwu.com",
+        "password": "1234"
+      },
+      "shipping": {
+        "address": "",
+        "district": "",
+        "province": ""
+      },
+      "payment": {
+        "selectedMethod": 0,
+        "card": {
+          "number": "",
+          "name": "",
+          "month": "",
+          "year": "",
+          "cvv": 0
+        },
+        "wallet": {
+          "id": 0
+        }
+      }
     }
   ],
   "imageList": [
     {
       "id": 0,
-      "location": "0.png"
+      "location": "default.png"
     },
     {
       "id": 1,
@@ -1430,29 +1531,73 @@
   ],
   "footer": [
     {
-      "title":"Información",
+      "title": "Información",
       "content": [
-        {"label": "Mi cuenta","to": "/account", "img":""},
-        {"label": "Mis Compras","to":  "/myOrders", "img":""},
-        {"label": "Políticas", "to": "/polices", "img":""},
-        {"label": "Aliados", "to": "/aliances", "img":""}
+        {
+          "label": "Mi cuenta",
+          "to": "/account",
+          "img": ""
+        },
+        {
+          "label": "Mis Compras",
+          "to": "/myOrders",
+          "img": ""
+        },
+        {
+          "label": "Políticas",
+          "to": "/polices",
+          "img": ""
+        },
+        {
+          "label": "Aliados",
+          "to": "/aliances",
+          "img": ""
+        }
       ]
     },
     {
-      "title":"Tienda",
+      "title": "Tienda",
       "content": [
-        {"label": "Inicio","to": "", "img":""},
-        {"label": "Tienda","to":  "/search?prompt=", "img":""},
-        {"label": "Categorias", "to": "/categories", "img":""},
-        {"label": "Contactanos", "to": "/contact-us", "img":""}
+        {
+          "label": "Inicio",
+          "to": "",
+          "img": ""
+        },
+        {
+          "label": "Tienda",
+          "to": "/search?prompt=",
+          "img": ""
+        },
+        {
+          "label": "Categorias",
+          "to": "/categories",
+          "img": ""
+        },
+        {
+          "label": "Contactanos",
+          "to": "/contact-us",
+          "img": ""
+        }
       ]
     },
     {
-      "title":"Follow Us",
+      "title": "Follow Us",
       "content": [
-        {"label": "Tienda","to":  "facebook", "img":"facebook"},
-        {"label": "Contactanos", "to": "instagram", "img":"instagram"},
-        {"label": "Categorias", "to": "tiktok", "img":"tiktok"}
+        {
+          "label": "Tienda",
+          "to": "facebook",
+          "img": "facebook"
+        },
+        {
+          "label": "Contactanos",
+          "to": "instagram",
+          "img": "instagram"
+        },
+        {
+          "label": "Categorias",
+          "to": "tiktok",
+          "img": "tiktok"
+        }
       ]
     }
   ]

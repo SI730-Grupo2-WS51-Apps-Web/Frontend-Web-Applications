@@ -1,4 +1,4 @@
-import {searchUserByLoginData} from './account.service'
+import {createUser, getUserByLoginData} from './account.service'
 let userInfo = null;
 class ObserverPattern {
     constructor() {
@@ -18,8 +18,8 @@ class ObserverPattern {
             observer(userInfo);
         });
     }
-    async logIn(mail, password) {
-        let response = await searchUserByLoginData(mail, password);
+    async logIn(email, password) {
+        let response = await getUserByLoginData(email, password);
         if(response !== undefined && response){
             userInfo = response;
             this.notifyChange();
@@ -30,6 +30,13 @@ class ObserverPattern {
     logOut(){
         userInfo = null;
         this.notifyChange();
+    }
+    async register(userData){
+        return await createUser(userData)
+            .then((registeredUser)=>{
+                userInfo = registeredUser;
+                this.notifyChange();
+            })
     }
 };
 const userNotifications = new ObserverPattern();
@@ -51,5 +58,8 @@ methods:{
     },
     logOut(){
         userNotifications.logOut();
+    },
+    async register(userData){
+        return await userNotifications.register(userData);
     }
 }}

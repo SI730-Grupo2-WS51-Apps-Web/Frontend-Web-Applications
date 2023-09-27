@@ -1,15 +1,17 @@
 import http from "@/shared/services/http-common";
+import {getImageURLbyImageId} from "@/shared/services/image.service";
 
 const paymentMethods={
     card: 1,
     wallet: 2,
 }
-async function searchUserByLoginData(email, password){
+async function getUserByLoginData(email, password){
     try {
         const response = await http.get(`/users?login.email=${email}&login.password=${password}`);
         const userData = response.data;
         if(userData !== undefined){
             if(userData.length > 0){
+                userData[0].image = await getImageURLbyImageId(userData[0].image);
                 userData[0].login.password = "***********";
                 const paymentMethodResponse = await http.get(`/paymentMethods?id=${userData[0].payment.selectedMethod}`);
                 const paymentData = paymentMethodResponse.data;
@@ -51,6 +53,62 @@ async function searchUserByLoginData(email, password){
     }
 }
 
+async function emailUsed(email){
+    try {
+        const response = await http.get(`/users?login.email=${email}`);
+        const userData = response.data;
+        if(userData !== undefined) return userData.length > 0;
+        else return false;
+    } catch (error) {
+        console.error("Error al validar si el usuario existe en account.service.js: ", error);
+        return false;
+    }
+}
+
+async function createUser(newUserData){
+    try {
+        const response = await http.get(`/users?_sort=id&_order=asc`);
+        const usersData = response.data;
+        //Como los ID estan ordenados de menor a mayor, si quisieramos
+        //saber si hay algun ID que no hemos usado que sea menor al
+        //maximo id, podemos usar un truco. Como los elementos del arreglo
+        //estan ordenados por ID, entonces los valores que contenga ese
+        //arreglo deberian ser id=0 pos=0; id=1 pos=1; y así sucesivamente,
+        //hasta id=n pos=n. Si falta algun valor de entre medias, entonces
+        //el ultimo valor n sería id=n+a pos=n, siendo a  la cantidad de ids
+        //sin usar si hicieramos una lista desde 0 hasta n
+        if(usersData[usersData.length-1].id === usersData.length-1){
+            console.log("Las IDs estan usadas. Se creará una nueva")
+            newUserData.id = usersData.length;
+        }
+        else{
+            console.log("Hay IDs disponibles sin usar")
+            let left = 0;
+            let right = usersData.length - 1;
+            while (left <= right) {
+                const mid = Math.floor((left + right) / 2);
+
+                // Comprueba si el ID actual es igual a su posición en el arreglo.
+                if (usersData[mid].id === mid) {
+                    // Si es igual, busca en la mitad derecha.
+                    left = mid + 1;
+                } else {
+                    // Si no es igual, busca en la mitad izquierda.
+                    right = mid - 1;
+                }
+            }
+            newUserData.id = left;
+        }
+        console.log(newUserData)
+        const creationResponse = await http.post(`/users`,newUserData);
+        const creationData = response.data;
+        return newUserData;
+    } catch (error) {
+        console.error("Error al crear el usuario en account.service.js: ", error);
+        return false;
+    }
+}
+
 export {
-    searchUserByLoginData
+    getUserByLoginData, emailUsed, createUser,
 }
