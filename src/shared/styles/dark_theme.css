@@ -48,13 +48,13 @@
 }
 body{
     background-color: #0b0b0b;
-    font-family: 'Montserrat Light', sans-serif;
+    font-family: 'Montserrat Thin', sans-serif;
 }
 * {
     box-sizing: border-box;
 }
 .p-component {
-    font-family: 'Montserrat Light', sans-serif;
+    font-family: 'Montserrat Thin', sans-serif;
     font-size: 1rem;
     font-weight: normal;
 }
@@ -81,7 +81,7 @@ body{
 }
 .p-link {
     font-size: 1rem;
-    font-family: 'Montserrat Light', sans-serif;
+    font-family: 'Montserrat Thin', sans-serif;
     border-radius: 10px;
 }
 .p-link:focus {
@@ -256,7 +256,7 @@ body{
     padding: 0.375rem 0;
 }
 .p-autocomplete .p-autocomplete-multiple-container .p-autocomplete-input-token input {
-    font-family: 'Montserrat Light', sans-serif;
+    font-family: 'Montserrat Thin', sans-serif;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.87);
     padding: 0;
@@ -705,7 +705,7 @@ body{
     padding: 0.375rem 0;
 }
 .p-chips .p-chips-multiple-container .p-chips-input-token input {
-    font-family: 'Montserrat Light', sans-serif;
+    font-family: 'Montserrat Thin', sans-serif;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.87);
     padding: 0;
@@ -1054,7 +1054,7 @@ body{
     border-color: #f90000;
 }
 .p-inputtext {
-    font-family: 'Montserrat Light', sans-serif;
+    font-family: 'Montserrat Thin', sans-serif;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.87);
     background: #0e0e0e;
@@ -1754,7 +1754,7 @@ body{
     background-color: #eaeaea;
 }
 .p-button.p-button-raised {
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .p-button.p-button-rounded {
     border-radius: 2rem;
@@ -2366,7 +2366,7 @@ body{
     color: rgba(255, 255, 255, 0.6);
 }
 .p-splitbutton.p-button-raised {
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .p-splitbutton.p-button-rounded {
     border-radius: 2rem;
@@ -5820,7 +5820,7 @@ body{
 .p-progressbar .p-progressbar-value {
     border: 0 none;
     margin: 0;
-    background: #1b1b1b;
+    background: #AC0B0B;
 }
 .p-progressbar .p-progressbar-label {
     color: #eaeaea;
@@ -5939,7 +5939,7 @@ body{
 }
 .p-terminal .p-terminal-input {
     font-size: 1rem;
-    font-family: 'Montserrat Light', sans-serif;
+    font-family: 'Montserrat Thin', sans-serif;
 }
 .p-button-label {
     font-weight: 700;
