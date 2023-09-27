@@ -61,12 +61,12 @@ export default {
         accountCacheService.methods.register(this.registerData)
             .then((response)=>{
               console.log(response)
-              this.$emit("logged");
+              this.$emit("register_success");
             })
             .catch((error)=>{
               this.tryBack();
               console.log(error)
-              this.$emit("register_error");
+              this.$emit("register_error",error);
             })
 
       }

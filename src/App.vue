@@ -52,6 +52,13 @@ export default {
     },
     logged(){
       this.$router.push("/account");
+    },
+    register_error(error){
+      this.$toast.add({severity:'error', summary:'Ocurrio un error al registrar la cuenta',detail: error, life: 5000})
+    },
+    register_success(){
+      this.$toast.add({severity:'success', summary:'La cuenta se registró con éxito', life: 5000})
+      this.logged();
     }
   },
   created() {
@@ -64,12 +71,13 @@ export default {
     <header>
       <navbarComponent @logo="logoClicked" @cart="cartClicked" @user="userClicked" @search="search" @product="showProduct"/>
       <profileMiniComponent :open-clicked="littleProfileOpened" @account="myAccount" @orders="myAccount" @logout="logOut" @closed="littleProfileClosed"/>
+      <pv-toast/>
     </header>
     <main>
       <pv-scroll-top />
       <div class="header-area"/>
       <div class="content-margin">
-        <RouterView @logged="logged"/>
+        <RouterView @logged="logged" @register_error="register_error" @register_success="register_success"/>
       </div>
     </main>
     <footer>
