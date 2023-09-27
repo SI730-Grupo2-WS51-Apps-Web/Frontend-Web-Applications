@@ -74,7 +74,7 @@ export default {
 </template>
 
 
-<style scoped>
+<style>
 #mainToolbar{
   width: 100%;
   outline: none;
