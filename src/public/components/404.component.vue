@@ -14,15 +14,15 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<style>
   #not-found{
     height: 16rem;
-    width: 16em;
+    width: 16rem;
     border-radius: 4rem;
   }
   #not-found img{
     height: 16rem;
-    width: 16em;
+    width: 16rem;
     border-radius: 4rem;
   }
 </style>

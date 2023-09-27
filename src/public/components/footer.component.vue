@@ -71,7 +71,7 @@ export default {
 </template>
 
 
-<style scoped>
+<style>
 #footer{
   width: 100%;
   outline: none;
