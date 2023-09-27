@@ -23,9 +23,18 @@ const router = createRouter({
       component: () => import('../account/components/login.component.vue')
     },
     {
+      path: '/register',
+      name: 'register',
+      component: () => import('../account/components/register.component.vue')
+    },
+    {
       path: '/account',
       name: 'account',
       component: () => import('../account/components/account.component.vue')
+    },
+    {
+      path: '/user',
+      redirect: '/account',
     },
     {
       path: '/facebook',
