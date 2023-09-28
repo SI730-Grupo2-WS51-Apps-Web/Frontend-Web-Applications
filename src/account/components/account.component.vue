@@ -1,9 +1,9 @@
 <script>
 import stylesService from "@/shared/styles/styles.service";
 import accountService from "@/account/services/account-cache.service";
-import {getUserImageByUser} from "@/shared/services/image.service";
-
+import notLoggedInComponent from "@/account/components/not-logged-in.component.vue";
 export default {
+  components: {notLoggedInComponent},
   methods: {
     getUserInfo(newUserInfo){
       if(newUserInfo !== undefined && newUserInfo !== null && newUserInfo){
@@ -125,11 +125,7 @@ export default {
     </div>
 
   </div>
-  <div class="account flex flex-col text" v-else>
-    <pv-avatar image="images/characters/astronaut_not_here.png" class="mr-2" alt="No deberías estar aquí..." id="not-logged-avatar"/>
-    <div>Hmp... Parece que no debería estar aquí todavía...</div>
-    <div>Quizá deberías tratar de <router-link to="login" id="link">iniciar sesión</router-link> primero</div>
-  </div>
+  <notLoggedInComponent v-else/>
 </template>
 
 <style>
