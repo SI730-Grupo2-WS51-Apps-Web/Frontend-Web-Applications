@@ -41,7 +41,7 @@ createApp(App)
     .component('pv-scroll-top',ScrollTop)
     .component('pv-progress-bar',ProgressBar)
     .component('pv-dropdown',Dropdown)
-    .component('pv-toast', Toast)
+    .use(ToastService)
     .use(router)
     .mount('#app')
 
