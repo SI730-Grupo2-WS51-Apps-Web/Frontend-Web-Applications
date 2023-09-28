@@ -2,6 +2,7 @@ import http from "@/shared/services/http-common";
 import {getImageURLbyImageId} from "@/shared/services/image.service";
 
 const paymentMethods={
+    undefined: 0,
     card: 1,
     wallet: 2,
 }

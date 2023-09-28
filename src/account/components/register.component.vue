@@ -112,7 +112,7 @@ export default {
         <pv-input-text v-model="registerData.personal.firstName" placeholder="nombres"/>
         <pv-input-text v-model="registerData.personal.lastName" placeholder="apellidos"/>
         <pv-input-number v-model="registerData.personal.phone" inputMode="numeric" mode="decimal" :min="900000000" :max="999999999" placeholder="telefono" :use-grouping="false"/>
-        <pv-dropdown v-model="registerData.personal.genre" :options="genres" optionLabel="name" placeholder="Elija su sexo"></pv-dropdown>
+        <pv-dropdown v-model="registerData.personal.genre" :options="genres" optionLabel="name" option-value="value" placeholder="Elija su sexo"></pv-dropdown>
         <small class="p-error text" id="text-error">{{ errorMessage || '&nbsp;' }}</small>
       </div>
       <div class="flex flex-row login gap-2" v-if="completedPercentage < 100" style="padding-top:0.5rem">

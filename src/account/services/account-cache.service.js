@@ -54,12 +54,16 @@ methods:{
     },
     //Intenta iniciar sesión con dos credenciales. Si el inicio es exitoso, devuelve true. En caso contrario, devuelve false
     async logIn(mail, password){
-        return await userNotifications.logIn(mail, password);
+        const response = await userNotifications.logIn(mail, password);
+        console.log("login:", response)
+        return  !!response;
     },
     logOut(){
         userNotifications.logOut();
     },
     async register(userData){
-        return await userNotifications.register(userData);
+        const response = await userNotifications.register(userData);
+        console.log("register:", response)
+        return !!response;
     }
 }}
