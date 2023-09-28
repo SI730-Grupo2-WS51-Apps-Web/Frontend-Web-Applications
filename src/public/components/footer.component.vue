@@ -1,5 +1,4 @@
 <script>
-import { RouterLink } from 'vue-router';
 import stylesService from "@/shared/styles/styles.service";
 import {getFooterInfo} from "@/public/services/footer-data.service";
 

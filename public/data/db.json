@@ -1388,10 +1388,7 @@
         "firstName": "UwU",
         "lastName": "UwU",
         "phone": 976584321,
-        "genre": {
-          "name": "Masculino",
-          "value": true
-        }
+        "genre": true
       },
       "login": {
         "email": "uwu@uwu.uwu",
@@ -1454,10 +1451,7 @@
         "firstName": "Uwu",
         "lastName": "Uwu",
         "phone": 985674312,
-        "genre": {
-          "name": "Femenino",
-          "value": false
-        }
+        "genre": false
       },
       "login": {
         "email": "uwu@uwu.com",

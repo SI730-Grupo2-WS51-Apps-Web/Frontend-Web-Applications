@@ -20,7 +20,7 @@ import Password from "primevue/password";
 import ProgressBar from "primevue/progressbar";
 import Dropdown from "primevue/dropdown";
 import InputNumber from "primevue/inputnumber";
-import Toast from "primevue/toast";
+import ToastService  from "primevue/toastservice";
 
 
 

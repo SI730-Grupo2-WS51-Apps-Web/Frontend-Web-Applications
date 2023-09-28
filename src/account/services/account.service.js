@@ -37,7 +37,6 @@ async function getUserByLoginData(email, password){
                     userData[0].payment.MethodData.name = "Undefined";
                     userData[0].payment.MethodData.maxCost = 0;
                 }
-                console.log("uwu", userData)
                 return userData[0];
             }
             else {

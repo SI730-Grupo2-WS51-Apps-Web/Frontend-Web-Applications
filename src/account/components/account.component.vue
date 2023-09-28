@@ -15,7 +15,6 @@ export default {
           this.welcomeText = "Bienvenida"
         }
         if(!this.isUserLogged) this.isUserLogged=true;
-        this.updateImage();
       }
       else{
         if(this.isUserLogged) this.isUserLogged=false;
