@@ -8,12 +8,6 @@ export default {
     getUserInfo(newUserInfo){
       if(newUserInfo !== undefined && newUserInfo !== null && newUserInfo){
         this.userInfo = newUserInfo;
-        if(this.userInfo.personal.genre){
-          this.welcomeText = "Bienvenido"
-        }
-        else{
-          this.welcomeText = "Bienvenida"
-        }
         if(!this.isUserLogged) this.isUserLogged=true;
       }
       else{
@@ -31,7 +25,6 @@ export default {
       isDarkMode: false,
       currentMode: "light",
       isUserLogged: false,
-      welcomeText: "Bienvenido",
     };
   },
   created() {
@@ -46,7 +39,7 @@ export default {
   <div class="account flex flex-col" v-if="this.isUserLogged">
     <pv-avatar :image="`/images/profile/${userInfo.imageName}`" class="mr-2" alt="Usuario.png" id="main-profile-avatar"/>
     <div class="flex flex-row welcome-content text">
-      <div id="accountWelcomeText">{{welcomeText}},</div>
+      <div id="accountWelcomeText">{{this.userInfo.personal.genre?"Bienvenido":"Bienvenida"}},</div>
       <div id="accountUserText">{{this.userInfo.personal.firstName}}</div>
     </div>
     <div class="little-margin"/>
