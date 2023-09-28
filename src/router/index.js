@@ -28,6 +28,11 @@ const router = createRouter({
       component: () => import('../account/components/register.component.vue')
     },
     {
+      path: '/edit/directions',
+      name: 'directions',
+      component: () => import('../account/components/account-direction-editor.component.vue')
+    },
+    {
       path: '/account',
       name: 'account',
       component: () => import('../account/components/account.component.vue')

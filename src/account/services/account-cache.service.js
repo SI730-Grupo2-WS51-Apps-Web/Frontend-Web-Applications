@@ -1,5 +1,24 @@
-import {createUser, getUserByLoginData} from './account.service'
+import {createUser, getUserByLoginData, updateUser} from './account.service'
+import {getDistrictByID, getDepartmentByID, getProvinceByID} from "@/account/services/regional-information.service";
+import {userTemplate} from "@/account/models/user.models";
+import {getImportLinkContentCode} from "style-loader/dist/utils";
 let userInfo = null;
+
+function onlyToSave(usData){
+    let newUserData = userTemplate;
+    newUserData.id = usData.id;
+    newUserData.image = usData.image;
+    newUserData.personal.genre = usData.personal.genre;
+    newUserData.personal.firstName = usData.personal.firstName;
+    newUserData.personal.lastName = usData.personal.lastName
+    newUserData.shipping.district = usData.shipping.district;
+    newUserData.shipping.province = usData.shipping.province;
+    newUserData.shipping.address = usData.shipping.address;
+    newUserData.payment.card = usData.payment.card;
+    newUserData.payment.selectedMethod = usData.payment.selectedMethod;
+    newUserData.payment.wallet = usData.payment.wallet;
+    return newUserData;
+}
 class ObserverPattern {
     constructor() {
         this.observers = [];
@@ -38,6 +57,17 @@ class ObserverPattern {
                 this.notifyChange();
             })
     }
+    async update(userData){
+        return await updateUser(onlyToSave(userData))
+            .then((response)=>{
+                userInfo = userData;
+                this.notifyChange();
+                return response;
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+    }
 };
 const userNotifications = new ObserverPattern();
 
@@ -55,7 +85,6 @@ methods:{
     //Intenta iniciar sesión con dos credenciales. Si el inicio es exitoso, devuelve true. En caso contrario, devuelve false
     async logIn(mail, password){
         const response = await userNotifications.logIn(mail, password);
-        console.log("login:", response)
         return  !!response;
     },
     logOut(){
@@ -63,7 +92,18 @@ methods:{
     },
     async register(userData){
         const response = await userNotifications.register(userData);
-        console.log("register:", response)
         return !!response;
-    }
+    },
+    async updateDirection(Address, Department, District){
+        userInfo.shipping.address = Address;
+        userInfo.shipping.district = await getDistrictByID(District);
+        userInfo.shipping.province = await getDepartmentByID(Department);
+        userNotifications.update(userInfo)
+            .then((response)=>{
+                return response;
+            })
+            .catch((error)=>{
+                console.log("Ocurrio un error al actualizar la direccion en account-cache.service.js")
+            })
+    },
 }}

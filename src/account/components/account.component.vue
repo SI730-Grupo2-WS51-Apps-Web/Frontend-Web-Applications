@@ -92,7 +92,7 @@ export default {
             <div v-else>
               <div class="flex-row flex-justify-content gap-1">
                 <div class="main-text">Direccion:</div>
-                <div class="text">Registrar su dirección</div>
+                <RouterLink id="link" to="/edit/directions">Registrar su dirección</RouterLink>
               </div>
             </div>
             <div v-if="userInfo.payment.paymentMethod && userInfo.payment.MethodData">

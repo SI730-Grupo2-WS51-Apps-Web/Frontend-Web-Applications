@@ -109,6 +109,24 @@ async function createUser(newUserData){
     }
 }
 
+async function updateUser(userData){
+    try {
+        const login = await http.get(`/users/${userData.id}`);
+        //Recargar los datos de login
+        const loginData = login.data;
+        console.log(loginData)
+        userData.login = loginData.login;
+
+        const response = await http.put(`/users/${userData.id}`,userData);
+        const responseData = response.data;
+        if(responseData) return responseData;
+        else return false;
+    } catch (error) {
+        console.error("Error al actualizar el usuario en account.service.js: ", error);
+        return false;
+    }
+}
+
 export {
-    getUserByLoginData, emailUsed, createUser,
+    getUserByLoginData, emailUsed, createUser, updateUser,
 }

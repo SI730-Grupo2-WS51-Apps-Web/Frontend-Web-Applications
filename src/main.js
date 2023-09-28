@@ -21,6 +21,7 @@ import ProgressBar from "primevue/progressbar";
 import Dropdown from "primevue/dropdown";
 import InputNumber from "primevue/inputnumber";
 import ToastService  from "primevue/toastservice";
+import FocusTrap from "primevue/focustrap";
 
 
 
@@ -43,5 +44,6 @@ createApp(App)
     .component('pv-dropdown',Dropdown)
     .use(ToastService)
     .use(router)
+    .directive('pv-focus-trap', FocusTrap)
     .mount('#app')
 
