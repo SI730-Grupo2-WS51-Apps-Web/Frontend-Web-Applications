@@ -68,6 +68,7 @@ export default {
 </script>
 
 <template>
+  <div id="app">
     <header>
       <navbarComponent @logo="logoClicked" @cart="cartClicked" @user="userClicked" @search="search" @product="showProduct"/>
       <profileMiniComponent :open-clicked="littleProfileOpened" @account="myAccount" @orders="myAccount" @logout="logOut" @closed="littleProfileClosed"/>
@@ -83,12 +84,21 @@ export default {
     <footer>
       <footer-component/>
     </footer>
-
-
+  </div>
 </template>
 
 <style scoped>
+#app{
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+  vertical-align: center;
+}
 main{
   margin: 10px;
+  margin-top: auto;
+}
+footer{
+  margin-top: auto;
 }
 </style>
