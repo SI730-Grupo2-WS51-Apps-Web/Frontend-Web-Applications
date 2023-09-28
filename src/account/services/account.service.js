@@ -102,6 +102,8 @@ async function createUser(newUserData){
         console.log(newUserData)
         const creationResponse = await http.post(`/users`,newUserData);
         const creationData = response.data;
+        newUserData.imageName = await getImageURLbyImageId(newUserData.image);
+        newUserData.login.password = "***********";
         return newUserData;
     } catch (error) {
         console.error("Error al crear el usuario en account.service.js: ", error);
