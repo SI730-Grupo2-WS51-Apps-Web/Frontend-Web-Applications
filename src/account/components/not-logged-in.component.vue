@@ -11,3 +11,15 @@ export default {
     <div>Quizá deberías tratar de <router-link to="/login" id="link">iniciar sesión</router-link> primero</div>
   </div>
 </template>
+<style>
+#not-logged-avatar {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 2rem;
+}
+#not-logged-avatar img{
+  height: 20rem;
+  width: 20rem;
+  border-radius: 2rem;
+}
+</style>

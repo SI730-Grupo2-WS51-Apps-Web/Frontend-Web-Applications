@@ -152,14 +152,4 @@ export default {
   width: 20rem;
   border-radius: 2rem;
 }
-#not-logged-avatar {
-  height: 20rem;
-  width: 20rem;
-  border-radius: 2rem;
-}
-#not-logged-avatar img{
-  height: 20rem;
-  width: 20rem;
-  border-radius: 2rem;
-}
 </style>
