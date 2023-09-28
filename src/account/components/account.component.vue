@@ -45,7 +45,7 @@ export default {
 
 <template>
   <div class="account flex flex-col" v-if="this.isUserLogged">
-    <pv-avatar :image="`public/images/profile/${userInfo.imageName}`" class="mr-2" alt="Usuario.png" id="main-profile-avatar"/>
+    <pv-avatar :image="`/images/profile/${userInfo.imageName}`" class="mr-2" alt="Usuario.png" id="main-profile-avatar"/>
     <div class="flex flex-row welcome-content text">
       <div id="accountWelcomeText">{{welcomeText}},</div>
       <div id="accountUserText">{{this.userInfo.personal.firstName}}</div>

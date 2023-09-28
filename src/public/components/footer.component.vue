@@ -41,7 +41,7 @@ export default {
       <div class="flex flex-justify-content flex-col w-full">
         <div class="flex flex-justify-content flex-row">
           <div/>
-          <pv-image :src="`public/images/logos/${this.currentMode}/logo.png`" alt="Akira" class="footer-logo"/>
+          <pv-image :src="`/images/logos/${this.currentMode}/logo.png`" alt="Akira" class="footer-logo"/>
           <div/>
           <div class="flex-row">
             <div v-for="(section, index) in footerInfo" :key="index" class="right-padding-2">
@@ -50,7 +50,7 @@ export default {
                    :key="itemIndex"
                    class="left-padding-1 flex flex-row"
               >
-                <pv-image v-if="item.img !== ''" :src="`public/images/social-networks/${this.currentMode}/${item.img}.svg`" class="footer-icons" />
+                <pv-image v-if="item.img !== ''" :src="`/images/social-networks/${this.currentMode}/${item.img}.svg`" class="footer-icons" />
                 <router-link :to="item.to" class="text">
                   {{ item.label }}
                 </router-link>
@@ -62,7 +62,7 @@ export default {
         <pv-divider/>
         <div class="flex flex-justify-content flex-row w-full">
           <div class="flex flex-justify-content text">&copy; Akira, Lambders 2022</div>
-          <pv-image src="public/images/logos/methods.png" alt="Metodos de Pago" class="payment-image"/>
+          <pv-image src="/images/logos/methods.png" alt="Metodos de Pago" class="payment-image"/>
         </div>
       </div>
 

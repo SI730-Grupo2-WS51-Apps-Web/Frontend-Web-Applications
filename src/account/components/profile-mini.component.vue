@@ -79,7 +79,7 @@ export default {
     <template #header></template>
     <template #default>
       <div class="flex flex-col">
-        <pv-avatar :image="`public/images/profile/${userInfo.imageName}`" class="mr-2" alt="Usuario.png" id="mini-profile-avatar"/>
+        <pv-avatar :image="`/images/profile/${userInfo.imageName}`" class="mr-2" alt="Usuario.png" id="mini-profile-avatar"/>
         <div id="welcomeText" style="margin: 2px">{{welcomeText}}</div>
         <div id="userText" style="margin: 2px">{{this.userInfo.personal.firstName}}</div>
         <div class="flex flex-col align-left">
