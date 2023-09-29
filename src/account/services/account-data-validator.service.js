@@ -6,7 +6,7 @@ const errors = {
     not_genre: "No has elegido un sexo"
 }
 
-function validatePersonalInformation(info){
+async function validatePersonalInformation(info){
     info.personal.phone = Number(info.personal.phone);
     if(!info.personal.firstName) return errors.not_name;
     if(!info.personal.lastName) return errors.not_last_name;

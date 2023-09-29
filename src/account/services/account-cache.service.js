@@ -94,11 +94,14 @@ methods:{
         const response = await userNotifications.register(userData);
         return !!response;
     },
-    async updateDirection(Address, Department, District){
+    async updateDirection(Address, Department, Province, District){
         userInfo.shipping.address = Address;
         userInfo.shipping.district = await getDistrictByID(District);
         userInfo.shipping.province = await getDepartmentByID(Department);
-        userNotifications.update(userInfo)
+        userInfo.shipping.district_id = District;
+        userInfo.shipping.province_id = Province;
+        userInfo.shipping.department_id = Department
+        return await userNotifications.update(userInfo)
             .then((response)=>{
                 return response;
             })

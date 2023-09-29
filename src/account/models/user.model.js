@@ -13,8 +13,9 @@ const userTemplate = {
     },
     shipping: {
         address: "",
-        district: "",
-        province: "",
+        district_id: "",
+        province_id: "",
+        department_id: "",
     },
     payment:{
         selectedMethod: 0,

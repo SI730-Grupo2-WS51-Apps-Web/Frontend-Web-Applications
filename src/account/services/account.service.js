@@ -1,6 +1,7 @@
 import http from "@/shared/services/http-common";
 import {getImageURLbyImageId} from "@/shared/services/image.service";
 import {paymentMethods} from "@/account/models/user.model";
+import {getDepartmentByID, getDistrictByID} from "@/account/services/regional-information.service";
 
 async function getUserByLoginData(email, password){
     try {
@@ -8,6 +9,8 @@ async function getUserByLoginData(email, password){
         const userData = response.data;
         if(userData !== undefined){
             if(userData.length > 0){
+                userData[0].shipping.district = await getDistrictByID(userData[0].shipping.district_id);
+                userData[0].shipping.province = await getDepartmentByID(userData[0].shipping.department_id);
                 userData[0].imageName = await getImageURLbyImageId(userData[0].image);
                 userData[0].login.password = "***********";
                 const paymentMethodResponse = await http.get(`/paymentMethods?id=${userData[0].payment.selectedMethod}`);
@@ -100,6 +103,8 @@ async function createUser(newUserData){
         const creationData = response.data;
         newUserData.imageName = await getImageURLbyImageId(newUserData.image);
         newUserData.login.password = "***********";
+        newUserData.shipping.district = await getDistrictByID(newUserData.shipping.district_id);
+        newUserData.shipping.province = await getDepartmentByID(newUserData.shipping.department_id);
         return newUserData;
     } catch (error) {
         console.error("Error al crear el usuario en account.service.js: ", error);

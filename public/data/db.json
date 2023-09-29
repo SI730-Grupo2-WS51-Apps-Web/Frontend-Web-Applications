@@ -1300,8 +1300,9 @@
       },
       "shipping": {
         "address": "Av. Brasil 3502 (Dpto. 102)",
-        "district": "Jesús María",
-        "province": "Lima"
+        "district_id": "150113",
+        "province_id": "1501",
+        "department_id": "15"
       },
       "payment": {
         "selectedMethod": 1,
@@ -1332,8 +1333,9 @@
       },
       "shipping": {
         "address": "Calle Parque Osores 123",
-        "district": "Pueblo Libre",
-        "province": "Lima"
+        "district_id": "150121",
+        "province_id": "1501",
+        "department_id": "15"
       },
       "payment": {
         "selectedMethod": 2,
@@ -1351,84 +1353,23 @@
     },
     {
       "id": 3,
-      "image": 3,
+      "image": 0,
       "personal": {
-        "firstName": "Annalucia",
-        "lastName": "Scerpella Zarkovic",
-        "phone": "+51 997 096 440",
+        "firstName": "uwu",
+        "lastName": "uwu",
+        "phone": 911111111,
         "genre": false
       },
       "login": {
-        "email": "annalucia@gmail.com",
-        "password": "1234"
+        "email": "uwu@uwu.uwu",
+        "password": "uwu"
       },
       "shipping": {
-        "address": "Calle Parque Osores 123",
-        "district": "Pueblo Libre",
-        "province": "Lima"
-      },
-      "payment": {
-        "selectedMethod": 2,
-        "card": {
-          "number": "4857 5663 8214 4352",
-          "name": "Marcelo Scerpella",
-          "month": "01",
-          "year": "24",
-          "cvv": 259
-        },
-        "wallet": {
-          "id": 1
-        }
-      }
-    },
-    {
-      "id": 4,
-      "image": 0,
-      "personal": {
-        "firstName": "UwU",
-        "lastName": "UwU",
-        "phone": null,
-        "genre": true
-      },
-      "login": {
-        "email": "uwu@uwu.com",
-        "password": "1234"
-      },
-      "shipping": {
-        "address": "Calle Los Bananeros",
-        "district": "Pueblo Libre",
-        "province": "Lima"
-      },
-      "payment": {
-        "selectedMethod": 0,
-        "card": {
-          "number": "",
-          "name": "",
-          "month": "",
-          "year": "",
-          "cvv": 0
-        },
-        "wallet": {
-          "id": 0
-        }
-      }
-    },
-    {
-      "id": 5,
-      "image": 0,
-      "personal": {
-        "firstName": "Nirvana",
-        "lastName": "Garcia",
-        "phone": null,
-        "genre": false
-      },
-      "login": {
-        "email": "nirvatres@nirvatres.com",
-        "password": "nirvatres"
-      },
-      "shipping": {
-        "address": "Calle Nueva Ventura, 777",
-        "district": "Coris",
+        "address": "Calle Los Santos",
+        "district_id": "020102",
+        "province_id": "0201",
+        "department_id": "02",
+        "district": "Cochabamba",
         "province": "Áncash"
       },
       "payment": {
@@ -1443,71 +1384,8 @@
         "wallet": {
           "id": 0
         }
-      }
-    },
-    {
-      "id": 6,
-      "image": 0,
-      "personal": {
-        "firstName": "UwU",
-        "lastName": "UwU",
-        "phone": 989888999,
-        "genre": true
       },
-      "login": {
-        "email": "ElChistositoUwU@uwu.com",
-        "password": "uwu"
-      },
-      "shipping": {
-        "address": "",
-        "district": "",
-        "province": ""
-      },
-      "payment": {
-        "selectedMethod": 0,
-        "card": {
-          "number": "",
-          "name": "",
-          "month": "",
-          "year": "",
-          "cvv": 0
-        },
-        "wallet": {
-          "id": 0
-        }
-      }
-    },
-    {
-      "id": 7,
-      "image": 0,
-      "personal": {
-        "firstName": "Jaime",
-        "lastName": "Altozano",
-        "phone": 979583215,
-        "genre": true
-      },
-      "login": {
-        "email": "jaime.altozano@gmail.com",
-        "password": "jaime"
-      },
-      "shipping": {
-        "address": "Mi Casita",
-        "district": "Cochamarca",
-        "province": "Lima"
-      },
-      "payment": {
-        "selectedMethod": 0,
-        "card": {
-          "number": "",
-          "name": "",
-          "month": "",
-          "year": "",
-          "cvv": 0
-        },
-        "wallet": {
-          "id": 0
-        }
-      }
+      "imageName": "default.png"
     }
   ],
   "imageList": [

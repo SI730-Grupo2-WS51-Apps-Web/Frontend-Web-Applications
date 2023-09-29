@@ -26,7 +26,7 @@ export default {
       this.errorMessage = true;
       this.errorMessage = validateDirection(this.newAddress, this.selectedDepartment, this.selectedProvince, this.selectedDistrict);
       if(!this.errorMessage){
-        accountService.methods.updateDirection(this.newAddress, this.selectedDepartment, this.selectedDistrict)
+        accountService.methods.updateDirection(this.newAddress, this.selectedDepartment, this.selectedProvince, this.selectedDistrict)
             .then((response)=>{
               this.$emit("logged")
             })
