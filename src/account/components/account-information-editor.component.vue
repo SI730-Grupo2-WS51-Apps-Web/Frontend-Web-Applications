@@ -20,13 +20,25 @@ export default {
     },
     tryEditPersonalData(){
       this.errorMessage = true;
-      this.errorMessage = validatePersonalInformation(this.userInfo);
-      if(!this.errorMessage){
-        accountService.methods.updatePersonalInformation(this.userInfo)
-            .then((response)=>{
-              this.$emit("logged")
-            })
-      }
+      validatePersonalInformation(this.userInfo)
+          .then((response)=>{
+            if(!response){
+              accountService.methods.updatePersonalInformation(this.userInfo)
+                  .then((response)=>{
+                    if(response && response.id > 0) this.$emit("logged")
+                    else console.log(response)
+                  })
+                  .catch((error)=>{
+                    console.log("error")
+                  })
+            }
+            else{
+              this.errorMessage = response;
+            }
+          })
+          .catch((error)=>{
+            console.log(error)
+          })
     },
     getMode(newDarkMode){
       this.isDarkMode = newDarkMode;
@@ -53,8 +65,7 @@ export default {
 </script>
 
 <template>
-
-  <div v-if="isUserLogged && errorMessage !== true">
+  <div v-if="isUserLogged && (errorMessage !== true)">
     <div class="medium-margin flex flex-col align-center">
       <div class="text-10 little-margin">Editar Informacion Personal</div>
     </div>
@@ -68,13 +79,13 @@ export default {
       </div>
       <div class="flex flex-row login gap-2 medium-margin">
         <pv-button label="Cancelar" size="large" severity="secondary" outlined rounded @click="this.$emit('logged')"/>
-        <pv-button :label="this.userInfo.shipping.district?'Actualizar':'Registrar'" size="large" severity="secondary" rounded @click="tryEditPersonalData"/>
+        <pv-button :label="'Actualizar'" size="large" severity="secondary" rounded @click="tryEditPersonalData"/>
       </div>
     </div>
   </div>
   <div v-else-if="errorMessage === true">
     <div class="medium-margin flex flex-col align-center">
-      <div class="text-10 little-margin">{{this.userInfo.shipping.district?"Actualizando Direccion...":"Creando Direccion..."}}</div>
+      <div class="text-10 little-margin">Actualizando Datos Personales...</div>
       <div class="little-margin"><pv-progress-bar style="width: 24rem" mode="indeterminate"/></div>
     </div>
   </div>

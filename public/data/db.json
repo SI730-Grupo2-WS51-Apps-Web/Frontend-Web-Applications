@@ -1323,8 +1323,8 @@
       "image": 6,
       "personal": {
         "firstName": "Marcelo",
-        "lastName": "Scerpella Zarkovic",
-        "phone": "+51 997 096 440",
+        "lastName": "Scerpella",
+        "phone": 956872135,
         "genre": true
       },
       "login": {
@@ -1332,24 +1332,32 @@
         "password": "1234"
       },
       "shipping": {
-        "address": "Calle Parque Osores 123",
-        "district_id": "150121",
-        "province_id": "1501",
-        "department_id": "15"
+        "address": "Calle Kenny Maldonado 589",
+        "district_id": "211209",
+        "province_id": "2112",
+        "department_id": "21",
+        "district": false,
+        "province": false
       },
       "payment": {
         "selectedMethod": 2,
         "card": {
-          "number": "4857 5663 8214 4352",
+          "number": "4857566382144344",
           "name": "Marcelo Scerpella",
           "month": "01",
           "year": "24",
-          "cvv": 259
+          "cvv": "558"
         },
         "wallet": {
           "id": 1
-        }
-      }
+        },
+        "MethodData": {
+          "name": "Yape",
+          "maxCost": 500
+        },
+        "paymentMethod": "Billetera Digital"
+      },
+      "imageName": "default.png"
     },
     {
       "id": 3,
@@ -1384,6 +1392,158 @@
         "wallet": {
           "id": 0
         }
+      },
+      "imageName": "default.png"
+    },
+    {
+      "id": 4,
+      "image": 0,
+      "personal": {
+        "firstName": "Luis",
+        "lastName": "Ramos",
+        "phone": 965135132,
+        "genre": true
+      },
+      "login": {
+        "email": "cuentadeprueba@gmail.com",
+        "password": "1234"
+      },
+      "shipping": {
+        "address": "Calle Los Manzanos 123",
+        "district_id": "160509",
+        "province_id": "1605",
+        "department_id": "16",
+        "district": "Tapiche",
+        "province": "Loreto"
+      },
+      "payment": {
+        "selectedMethod": 1,
+        "card": {
+          "number": "4589652131255147",
+          "name": "Luis Ramirez",
+          "month": "12",
+          "year": "28",
+          "cvv": "698"
+        },
+        "wallet": {
+          "id": 1
+        },
+        "MethodData": {
+          "name": "Yape",
+          "maxCost": 500
+        }
+      },
+      "imageName": "default.png"
+    },
+    {
+      "id": 5,
+      "image": 6,
+      "personal": {
+        "firstName": "Peter",
+        "lastName": "Parker",
+        "phone": 977599655,
+        "genre": true
+      },
+      "login": {
+        "email": "jose@jose.com",
+        "password": "a"
+      },
+      "shipping": {
+        "address": "Calle Kenny Maldonado 589",
+        "district_id": "",
+        "province_id": "",
+        "department_id": "",
+        "district": "Pichigua",
+        "province": "Cusco"
+      },
+      "payment": {
+        "selectedMethod": 2,
+        "card": {
+          "number": "4857566382144344",
+          "name": "Marcelo Scerpella",
+          "month": "01",
+          "year": "24",
+          "cvv": "558"
+        },
+        "wallet": {
+          "id": 1
+        }
+      }
+    },
+    {
+      "id": 6,
+      "image": 0,
+      "personal": {
+        "firstName": "test1",
+        "lastName": "test2",
+        "phone": 958612351,
+        "genre": false
+      },
+      "login": {
+        "email": "uwu@test.com",
+        "password": "uwu"
+      },
+      "shipping": {
+        "address": "Calle Arboleda 519",
+        "district_id": "020402",
+        "province_id": "0204",
+        "department_id": "02",
+        "district": "Acochaca",
+        "province": "Áncash"
+      },
+      "payment": {
+        "selectedMethod": 0,
+        "card": {
+          "number": "",
+          "name": "",
+          "month": "",
+          "year": "",
+          "cvv": 0
+        },
+        "wallet": {
+          "id": 0
+        }
+      },
+      "imageName": "default.png"
+    },
+    {
+      "id": 7,
+      "image": 0,
+      "personal": {
+        "firstName": "Peter",
+        "lastName": "McGeal",
+        "phone": 987654321,
+        "genre": true
+      },
+      "login": {
+        "email": "registroprueba@gmail.com",
+        "password": "Contraseñaprueba"
+      },
+      "shipping": {
+        "address": "Calle Las Rocas 878",
+        "district_id": "211209",
+        "province_id": "2112",
+        "department_id": "21",
+        "district": "Alto Inambari",
+        "province": "Puno"
+      },
+      "payment": {
+        "selectedMethod": 1,
+        "card": {
+          "number": "4587  6231  5213  2121",
+          "name": "Peter McGeal",
+          "month": "08",
+          "year": "29",
+          "cvv": "875"
+        },
+        "wallet": {
+          "id": 1
+        },
+        "MethodData": {
+          "name": "Yape",
+          "maxCost": 500
+        },
+        "paymentMethod": "Billetera Digital"
       },
       "imageName": "default.png"
     }

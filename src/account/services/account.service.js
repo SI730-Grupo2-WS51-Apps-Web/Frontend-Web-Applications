@@ -98,7 +98,6 @@ async function createUser(newUserData){
             }
             newUserData.id = left;
         }
-        console.log(newUserData)
         const creationResponse = await http.post(`/users`,newUserData);
         const creationData = response.data;
         newUserData.imageName = await getImageURLbyImageId(newUserData.image);
@@ -117,7 +116,6 @@ async function updateUser(userData){
         const login = await http.get(`/users/${userData.id}`);
         //Recargar los datos de login
         const loginData = login.data;
-        console.log(loginData)
         userData.login = loginData.login;
 
         const response = await http.put(`/users/${userData.id}`,userData);

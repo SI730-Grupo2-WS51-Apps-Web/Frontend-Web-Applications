@@ -58,7 +58,6 @@ export default {
           :suggestions="productsFiltered"
           @complete="filterProducts"
           placeholder="Busca un producto"
-          forceSelection
           @keydown.enter="searchBarClicked"
           @itemSelect="productSelected"
       />

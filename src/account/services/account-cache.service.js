@@ -1,6 +1,8 @@
 import {createUser, getUserByLoginData, updateUser} from './account.service'
 import {getDistrictByID, getDepartmentByID, getProvinceByID} from "@/account/services/regional-information.service";
-import {userTemplate} from "@/account/models/user.model";
+import {paymentMethods, userTemplate} from "@/account/models/user.model";
+import {getWalletFromID} from "@/payment/services/digital-wallets.service";
+import http from "@/shared/services/http-common";
 let userInfo = null;
 
 function onlyToSave(usData){
@@ -110,7 +112,34 @@ methods:{
             })
     },
     async updatePersonalInformation(newUserData){
-        userNotifications.update(userInfo)
+        return await userNotifications.update(newUserData)
+            .then((response)=>{
+                return response;
+            })
+            .catch((error)=>{
+                console.log("Ocurrio un error al actualizar la información personal del usuario en account-cache.service.js")
+            })
+    },
+    async updatePaymentInformation(newUserData){
+        newUserData.payment.MethodData = {};
+
+        if(newUserData.payment.selectedMethod === paymentMethods.Tarjeta){
+            newUserData.payment.paymentMethod = "Tarjeta de Débito"
+            newUserData.payment.MethodData.name = newUserData.payment.card.number;
+            newUserData.payment.MethodData.maxCost = 100000;
+        }
+        else if(newUserData.payment.selectedMethod === paymentMethods["Billetera Digital"]){
+            const walletData = await getWalletFromID(newUserData.payment.wallet.id)
+            newUserData.payment.paymentMethod = "Billetera Digital"
+            newUserData.payment.MethodData.name = walletData.name;
+            newUserData.payment.MethodData.maxCost = walletData.max;
+        }
+        else{
+            newUserData.payment.paymentMethod = "Undefined";
+            newUserData.payment.MethodData.name = "Undefined";
+            newUserData.payment.MethodData.maxCost = 0;
+        }
+        userNotifications.update(newUserData)
             .then((response)=>{
                 return response;
             })

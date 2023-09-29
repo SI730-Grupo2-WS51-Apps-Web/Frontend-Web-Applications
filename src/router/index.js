@@ -40,7 +40,7 @@ const router = createRouter({
     {
       path: '/edit/payment',
       name: 'edit payment data',
-      component: () => import('../account/components/account-direction-editor.component.vue')
+      component: () => import('../payment/components/account-payment-editor.component.vue')
     },
     {
       path: '/account',

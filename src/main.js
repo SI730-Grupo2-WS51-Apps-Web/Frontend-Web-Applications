@@ -23,6 +23,8 @@ import InputNumber from "primevue/inputnumber";
 import ToastService  from "primevue/toastservice";
 import FocusTrap from "primevue/focustrap";
 import Tooltip from "primevue/tooltip";
+import SelectButton from "primevue/selectbutton";
+import InputMask from 'primevue/inputmask';
 
 createApp(App)
     .use(PrimeVue, {ripple:true})
@@ -41,6 +43,8 @@ createApp(App)
     .component('pv-scroll-top',ScrollTop)
     .component('pv-progress-bar',ProgressBar)
     .component('pv-dropdown',Dropdown)
+    .component('pv-select-button',SelectButton)
+    .component('pv-input-mask',InputMask)
     .use(ToastService)
     .use(router)
     .directive('focus-trap', FocusTrap)
