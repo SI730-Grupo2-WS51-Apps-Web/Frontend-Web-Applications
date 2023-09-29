@@ -3,8 +3,8 @@ import {userTemplate} from "@/account/models/user.model";
 import {genres} from "@/account/models/user.model";
 
 const errors = {
-    no_mail: "No ha ingresado un correo para la cuenta",
-    no_password: "No ha ingresado una contraseña para la cuenta",
+    no_mail: "No has ingresado un correo válido",
+    no_password: "No has ingresado una contraseña válida",
     no_at: "El correo no posee una @",
     more_than_one_at: "El correo tiene más @ de las que debería",
     no_mail_valid_url: "La direccion web del correo es invalida",
