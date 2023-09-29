@@ -106,4 +106,13 @@ methods:{
                 console.log("Ocurrio un error al actualizar la direccion en account-cache.service.js")
             })
     },
+    async updatePersonalInformation(newUserData){
+        userNotifications.update(userInfo)
+            .then((response)=>{
+                return response;
+            })
+            .catch((error)=>{
+                console.log("Ocurrio un error al actualizar la información personal del usuario en account-cache.service.js")
+            })
+    }
 }}

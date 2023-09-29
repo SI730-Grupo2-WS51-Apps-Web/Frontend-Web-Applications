@@ -29,7 +29,17 @@ const router = createRouter({
     },
     {
       path: '/edit/directions',
-      name: 'directions',
+      name: 'edit directions',
+      component: () => import('../account/components/account-direction-editor.component.vue')
+    },
+    {
+      path: '/edit/personal',
+      name: 'edit personal data',
+      component: () => import('../account/components/account-information-editor.component.vue')
+    },
+    {
+      path: '/edit/payment',
+      name: 'edit payment data',
       component: () => import('../account/components/account-direction-editor.component.vue')
     },
     {
