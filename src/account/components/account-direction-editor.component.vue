@@ -22,7 +22,7 @@ export default {
       this.isDarkMode = newDarkMode;
       this.currentMode = stylesService.methods.getCurrentMode();
     },
-    tryRegisterDirection(){
+    tryEditDirection(){
       this.errorMessage = true;
       this.errorMessage = validateDirection(this.newAddress, this.selectedDepartment, this.selectedProvince, this.selectedDistrict);
       if(!this.errorMessage){
@@ -107,7 +107,7 @@ export default {
       </div>
       <div class="flex flex-row login gap-2" style="padding-top:0.5rem">
         <pv-button label="Cancelar" size="large" severity="secondary" outlined rounded @click="this.$emit('logged')"/>
-        <pv-button :label="this.userInfo.shipping.district?'Actualizar':'Registrar'" size="large" severity="secondary" rounded @click="tryRegisterDirection"/>
+        <pv-button :label="this.userInfo.shipping.district?'Actualizar':'Registrar'" size="large" severity="secondary" rounded @click="tryEditDirection"/>
       </div>
     </div>
   </div>
