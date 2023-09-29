@@ -79,4 +79,15 @@ export default {
   width: 100%;
   outline: none;
 }
+.navbar {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+.navbar > div{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 </style>

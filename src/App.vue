@@ -94,6 +94,9 @@ export default {
   flex-direction: column;
   vertical-align: center;
 }
+header div{
+  flex-wrap: nowrap;
+}
 main{
   margin: 10px;
   margin-top: auto;
