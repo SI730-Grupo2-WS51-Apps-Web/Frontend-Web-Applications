@@ -22,8 +22,7 @@ import Dropdown from "primevue/dropdown";
 import InputNumber from "primevue/inputnumber";
 import ToastService  from "primevue/toastservice";
 import FocusTrap from "primevue/focustrap";
-
-
+import Tooltip from "primevue/tooltip";
 
 createApp(App)
     .use(PrimeVue, {ripple:true})
@@ -44,6 +43,7 @@ createApp(App)
     .component('pv-dropdown',Dropdown)
     .use(ToastService)
     .use(router)
-    .directive('pv-focus-trap', FocusTrap)
+    .directive('focus-trap', FocusTrap)
+    .directive('tooltip',Tooltip)
     .mount('#app')
 
