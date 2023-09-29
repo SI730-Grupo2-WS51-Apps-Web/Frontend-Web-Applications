@@ -18,12 +18,12 @@ async function getUserByLoginData(email, password){
                 if(paymentData && paymentData.length === 1){
                     userData[0].payment.paymentMethod = paymentData[0].name;
                     switch (paymentData[0].id){
-                        case paymentMethods.card:
+                        case paymentMethods["Tarjeta"]:
                             userData[0].payment.MethodData = {};
                             userData[0].payment.MethodData.name = userData[0].payment.card["number"];
                             userData[0].payment.MethodData.maxCost = 100000;
                             break;
-                        case paymentMethods.wallet:
+                        case paymentMethods["Billetera Digital"]:
                             const walletResponse = await http.get(`/wallets?id=${userData[0].payment.wallet.id}`);
                             const walletData = walletResponse.data;
                             userData[0].payment.MethodData = {};

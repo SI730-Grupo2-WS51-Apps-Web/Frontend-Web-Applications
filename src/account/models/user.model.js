@@ -31,10 +31,9 @@ const userTemplate = {
         }
     },
 }
-const paymentMethods={
-    undefined: 0,
-    card: 1,
-    wallet: 2,
+const paymentMethods= {
+    "Tarjeta": 1,
+    "Billetera Digital": 2,
 }
 
 const genres = [
