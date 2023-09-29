@@ -4,11 +4,14 @@ import navbarComponent from "@/public/components/navbar.component.vue";
 import footerComponent from "@/public/components/footer.component.vue";
 import profileMiniComponent from "@/account/components/profile-mini.component.vue";
 import accountService from "@/account/services/account-cache.service";
+import backgroundComponent from "@/landing/components/background.component.vue";
+
 export default {
   components:{
     navbarComponent,
     footerComponent,
     profileMiniComponent,
+    backgroundComponent,
 
     RouterLink,
     RouterView,
@@ -66,13 +69,21 @@ export default {
       <profileMiniComponent :open-clicked="littleProfileOpened" @account="myAccount" @orders="myAccount" @logout="logOut" @closed="littleProfileClosed"/>
     </header>
     <main>
+      
       <pv-scroll-top />
-      <div class="header-area"/>
+      <div class="header-area">
+        
+      </div>
+      
       <div class="content-margin">
+        
         <RouterView @logged="logged"/>
       </div>
     </main>
     <footer>
+      
+
+
       <footer-component/>
     </footer>
 
@@ -80,6 +91,9 @@ export default {
 </template>
 
 <style scoped>
+.content-margin {
+  padding: 0rem 0rem 0rem 0rem;
+}
 main{
   margin: 10px;
 }
