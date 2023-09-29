@@ -105,7 +105,7 @@ export default {
         <small class="p-error text" id="text-error">{{ errorMessage || ' ' }}</small>
 
       </div>
-      <div class="flex flex-row login gap-2" style="padding-top:0.5rem">
+      <div class="flex flex-row login gap-2 medium-margin">
         <pv-button label="Cancelar" size="large" severity="secondary" outlined rounded @click="this.$emit('logged')"/>
         <pv-button :label="this.userInfo.shipping.district?'Actualizar':'Registrar'" size="large" severity="secondary" rounded @click="tryEditDirection"/>
       </div>

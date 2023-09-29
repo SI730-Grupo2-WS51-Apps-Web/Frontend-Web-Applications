@@ -61,8 +61,8 @@ export default {
         </div>
         <pv-divider/>
         <div class="flex flex-justify-content flex-row w-full">
-          <div class="flex flex-justify-content text">&copy; Akira, Lambders 2022</div>
-          <pv-image src="/images/logos/methods.png" alt="Metodos de Pago" class="payment-image"/>
+          <div class="flex flex-justify-content text width-padding-3">&copy; Akira, Lambders 2022</div>
+          <pv-image src="/images/logos/methods.png" alt="Metodos de Pago" class="payment-image width-padding-3"/>
         </div>
       </div>
 
