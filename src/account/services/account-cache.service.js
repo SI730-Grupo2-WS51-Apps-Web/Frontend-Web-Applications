@@ -10,6 +10,7 @@ function onlyToSave(usData){
     newUserData.personal.genre = usData.personal.genre;
     newUserData.personal.firstName = usData.personal.firstName;
     newUserData.personal.lastName = usData.personal.lastName
+    newUserData.personal.phone = usData.personal.phone;
     newUserData.shipping.district = usData.shipping.district;
     newUserData.shipping.province = usData.shipping.province;
     newUserData.shipping.address = usData.shipping.address;
