@@ -26,6 +26,7 @@ class ObserverPattern {
 
     subscribe(observerFunction) {
         this.observers.push(observerFunction);
+        return isDarkMode;
     }
 
     unsubscribe(observer) {
@@ -75,7 +76,7 @@ export default {
             return modes[isDarkMode];
         },
         watchDarkMode(functionToCall){
-            darkModeNotifications.subscribe(functionToCall)
+            return darkModeNotifications.subscribe(functionToCall);
         },
         unwatchDarkMode(functionToCall){
             darkModeNotifications.unsubscribe(functionToCall)
