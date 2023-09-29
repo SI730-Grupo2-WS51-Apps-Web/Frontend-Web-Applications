@@ -22,6 +22,7 @@ export default {
   },
   data() {
     return {
+      editDialogOpened: false,
       userInfo: null,
       isDarkMode: false,
       currentMode: "light",
@@ -39,7 +40,7 @@ export default {
 
 <template>
   <div class="account flex flex-col" v-if="this.isUserLogged">
-    <pv-avatar :image="`/images/profile/${userInfo.imageName}`" class="mr-2" alt="Usuario.png" id="main-profile-avatar"/>
+    <pv-image :src="`/images/account-actions/${this.currentMode}/edit.svg`" alt="Edit" id="edit-logo" @click="editDialogOpened = true"/>
     <pv-avatar :image="`/images/profile/${userInfo.imageName}`" class="mr-2" alt="Foto de Perfil" id="main-profile-avatar"/>
     <div class="flex flex-row welcome-content text">
       <div id="accountWelcomeText">{{this.userInfo.personal.genre?"Bienvenido":"Bienvenida"}},</div>
@@ -121,6 +122,43 @@ export default {
 
   </div>
   <notLoggedInComponent v-else/>
+  <pv-dialog v-model:visible="editDialogOpened" modal header="Editar Datos">
+    <div class="flex flex-col gap-2">
+      <RouterLink to="/edit/personal">
+        <pv-button label="Editar Datos Personales" icon="pi pi-user" v-tooltip="{ value:`<div class='flex flex-row'>
+            <div class='pi pi-exclamation-triangle'/> Advertencia <div class='pi pi-exclamation-triangle'/>:
+            </div>
+            <p style='font-size: 0.8rem'>Este cambio se aplicara a todos los pedidos que ya hallan sido realizados
+            Los pedidos solo podrán ser recibidos por la persona que tenga el nombre que ha insertado
+            Al entregar el pedido, se llamará al nuevo número de telefono que registre
+            </p>`,
+            escape: true, class:'custom-error'}"
+        />
+      </RouterLink>
+      <RouterLink to="/edit/directions">
+        <pv-button label="Editar Dirección Actual" icon="pi pi-building" v-tooltip="{ value:`<div class='flex flex-row'>
+            <div class='pi pi-exclamation-triangle'/> Advertencia <div class='pi pi-exclamation-triangle'/>:
+            </div>
+            <p style='font-size: 0.8rem'>Este cambio se aplicara solo a los futuros pedidos que hagas
+            Los pedidos que ya hallas realizado no cambiarán su dirección de envío
+            Los próximos pedidos que hagas tendrán como dirección de envío esta nueva dirección
+            </p>`,
+            escape: true, class:'custom-error'}"
+        />
+      </RouterLink>
+      <RouterLink to="/edit/payment">
+        <pv-button label="Editar Metodo de Pago" icon="pi pi-credit-card" v-tooltip="{ value:`<div class='flex flex-row'>
+            <div class='pi pi-exclamation-triangle'/> Advertencia <div class='pi pi-exclamation-triangle'/>:
+            </div>
+            <p style='font-size: 0.8rem'>Este cambio se aplicara solo a los futuros pedidos que hagas
+            Los pedidos que ya hallas realizado no cambiarán su dirección de envío
+            Los próximos pedidos que hagas tendrán como dirección de envío esta nueva dirección
+            </p>`,
+            escape: true, class:'custom-error'}"
+        />
+      </RouterLink>
+    </div>
+  </pv-dialog>
 </template>
 
 <style>
@@ -147,5 +185,12 @@ export default {
   height: 20rem;
   width: 20rem;
   border-radius: 2rem;
+}
+#edit-logo{
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  right: 5rem;
+  top: 11.5rem;
 }
 </style>
