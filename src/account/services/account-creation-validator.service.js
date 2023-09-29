@@ -1,10 +1,6 @@
 import {emailUsed} from "@/account/services/account.service";
-import {userTemplate} from "@/account/models/user.models";
-
-const genres = [
-    {name: "Masculino",value:true},
-    {name: "Femenino",value:false},
-]
+import {userTemplate} from "@/account/models/user.model";
+import {genres} from "@/account/models/user.model";
 
 const errors = {
     no_mail: "No ha ingresado un correo para la cuenta",

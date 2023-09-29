@@ -1,7 +1,6 @@
 import {createUser, getUserByLoginData, updateUser} from './account.service'
 import {getDistrictByID, getDepartmentByID, getProvinceByID} from "@/account/services/regional-information.service";
-import {userTemplate} from "@/account/models/user.models";
-import {getImportLinkContentCode} from "style-loader/dist/utils";
+import {userTemplate} from "@/account/models/user.model";
 let userInfo = null;
 
 function onlyToSave(usData){

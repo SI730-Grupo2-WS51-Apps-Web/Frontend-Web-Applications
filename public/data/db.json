@@ -1481,9 +1481,9 @@
       "id": 7,
       "image": 0,
       "personal": {
-        "firstName": "Jaimito",
-        "lastName": "Comprate un palito",
-        "phone": 999999998,
+        "firstName": "Jaime",
+        "lastName": "Altozano",
+        "phone": 979583215,
         "genre": true
       },
       "login": {
@@ -1491,9 +1491,9 @@
         "password": "jaime"
       },
       "shipping": {
-        "address": "Calle Felipe Juan Jaime",
-        "district": "Abancay",
-        "province": "Apurímac"
+        "address": "Mi Casita",
+        "district": "Cochamarca",
+        "province": "Lima"
       },
       "payment": {
         "selectedMethod": 0,
@@ -1507,8 +1507,7 @@
         "wallet": {
           "id": 0
         }
-      },
-      "imageName": "default.png"
+      }
     }
   ],
   "imageList": [

@@ -1,11 +1,7 @@
 import http from "@/shared/services/http-common";
 import {getImageURLbyImageId} from "@/shared/services/image.service";
+import {paymentMethods} from "@/account/models/user.model";
 
-const paymentMethods={
-    undefined: 0,
-    card: 1,
-    wallet: 2,
-}
 async function getUserByLoginData(email, password){
     try {
         const response = await http.get(`/users?login.email=${email}&login.password=${password}`);

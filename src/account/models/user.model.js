@@ -30,4 +30,15 @@ const userTemplate = {
         }
     },
 }
-export {userTemplate}
+const paymentMethods={
+    undefined: 0,
+    card: 1,
+    wallet: 2,
+}
+
+const genres = [
+    {name: "Masculino",value:true},
+    {name: "Femenino",value:false},
+]
+
+export {userTemplate, paymentMethods, genres}
