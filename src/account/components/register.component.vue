@@ -1,6 +1,6 @@
 <script>
-import {genres, userTemplate, validateNewEmailAndPassword, validatePersonalInformation} from "@/account/services/register-validator.service";
 import {genres, userTemplate, validateNewEmailAndPassword} from "@/account/services/account-creation-validator.service";
+import {validatePersonalInformation} from "@/account/services/account-data-validator.service";
 import accountCacheService from "@/account/services/account-cache.service";
 export default {
   data(){

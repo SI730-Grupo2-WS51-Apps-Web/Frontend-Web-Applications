@@ -10,13 +10,6 @@ const errors = {
     no_mail_valid_url: "La direccion web del correo es invalida",
     email_already_used: "El correo ya ha sido usado antes",
     no_repeated_password: "Las contraseñas ingresadas no son iguales",
-
-    not_name: "Debe insertar un nombre",
-    not_last_name: "Debe insertar un apellido",
-    not_phone: "Debe insertar un numero de telefono",
-    phone_is_not_a_number: "El telefono debe ser un número",
-    phone_out_of_range: "El numero telefonico debe ser un valor entre 900 000 000 y 999 999 999",
-    not_genre: "No ha elegido su sexo"
 }
 async function validateNewEmailAndPassword(user, repeatedPass){
     if(!user.login.password) return errors.no_password;
@@ -47,22 +40,7 @@ async function validateNewEmailAndPassword(user, repeatedPass){
         return false
     }
 }
-async function validatePersonalInformation(info){
-    info.personal.phone = Number(info.personal.phone);
-    if(!info.personal.firstName) return errors.not_name;
-    if(!info.personal.lastName) return errors.not_last_name;
-    if(!info.personal.phone) return errors.not_phone;
-    if(!info.personal.genre) return errors.not_genre;
-    if(info.personal.phone === NaN){
-        info.personal.phone = "";
-        return errors.phone_is_not_a_number;
-    }
-    if(!(900000000<info.personal.phone && info.personal.phone<999999999)){
-        return errors.phone_out_of_range;
-    }
-    return false;
-}
 
 export {
-    genres, userTemplate, validateNewEmailAndPassword, validatePersonalInformation,
+    genres, userTemplate, validateNewEmailAndPassword,
 }
