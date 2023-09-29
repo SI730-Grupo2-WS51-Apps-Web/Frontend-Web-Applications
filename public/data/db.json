@@ -323,7 +323,7 @@
       "franchise": 0,
       "name": "Naruto Uzumaki Figure",
       "price": 290,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 1,
@@ -332,7 +332,7 @@
       "franchise": 1,
       "name": "Luffy Figure",
       "price": 380,
-      "image": "default.png"
+      "image": "src/static/images/luffy-figure.jpg"
     },
     {
       "id": 2,
@@ -341,7 +341,7 @@
       "franchise": 2,
       "name": "Nezuko Figure",
       "price": 270,
-      "image": "default.png"
+      "image": "src/static/images/nezuko-figure.jpg"
     },
     {
       "id": 3,
@@ -350,7 +350,7 @@
       "franchise": 3,
       "name": "Tanjiro Figure",
       "price": 300,
-      "image": "default.png"
+      "image": "src/static/images/tanjiro-figure.jpg"
     },
     {
       "id": 4,
@@ -359,7 +359,7 @@
       "franchise": 4,
       "name": "Deku Figure",
       "price": 350,
-      "image": "default.png"
+      "image": "src/static/images/deku-figure.jpg"
     },
     {
       "id": 5,
@@ -368,7 +368,7 @@
       "franchise": 5,
       "name": "Ichigo Figure",
       "price": 320,
-      "image": "default.png"
+      "image": "src/static/images/ichigo-figure.jpg"
     },
     {
       "id": 6,
@@ -377,7 +377,7 @@
       "franchise": 6,
       "name": "Kaneki Figure",
       "price": 280,
-      "image": "default.png"
+      "image": "src/static/images/kaneki-figure.jpg"
     },
     {
       "id": 7,
@@ -386,7 +386,7 @@
       "franchise": 7,
       "name": "Caiman Figure",
       "price": 310,
-      "image": "default.png"
+      "image": "src/static/images/caiman-dorohedoro-figure.jpg"
     },
     {
       "id": 8,
@@ -395,7 +395,7 @@
       "franchise": 8,
       "name": "Edward Figure",
       "price": 340,
-      "image": "default.png"
+      "image": "src/static/images/edward-figure.jpg"
     },
     {
       "id": 9,
@@ -404,7 +404,7 @@
       "franchise": 9,
       "name": "Hinata Figure",
       "price": 270,
-      "image": "default.png"
+      "image": "src/static/images/hinata-figure.jpg"
     },
     {
       "id": 10,
@@ -413,7 +413,7 @@
       "franchise": 10,
       "name": "Emma Figure",
       "price": 320,
-      "image": "default.png"
+      "image": "src/static/images/emma-figure.jpg"
     },
     {
       "id": 11,
@@ -422,7 +422,7 @@
       "franchise": 11,
       "name": "Light Figure",
       "price": 290,
-      "image": "default.png"
+      "image": "src/static/images/light-yagami-figure.jpg"
     },
     {
       "id": 12,
@@ -431,7 +431,7 @@
       "franchise": 0,
       "name": "Yuri Figure",
       "price": 290,
-      "image": "default.png"
+      "image": "src/static/images/yuri-chibi.jpg"
     },
     {
       "id": 13,
@@ -440,7 +440,7 @@
       "franchise": 1,
       "name": "Rem Figure",
       "price": 380,
-      "image": "default.png"
+      "image": "src/static/images/rem-figure.jpg"
     },
     {
       "id": 14,
@@ -449,7 +449,7 @@
       "franchise": 2,
       "name": "Mio Figure",
       "price": 270,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 15,
@@ -458,7 +458,7 @@
       "franchise": 3,
       "name": "Usagi Figure",
       "price": 300,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 16,
@@ -467,7 +467,7 @@
       "franchise": 4,
       "name": "Mob Figure",
       "price": 350,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 17,
@@ -476,7 +476,7 @@
       "franchise": 5,
       "name": "Shinji Figure",
       "price": 320,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 18,
@@ -485,7 +485,7 @@
       "franchise": 6,
       "name": "Gon Figure",
       "price": 280,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 19,
@@ -494,7 +494,7 @@
       "franchise": 7,
       "name": "Dazai Figure",
       "price": 310,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 20,
@@ -503,7 +503,7 @@
       "franchise": 8,
       "name": "Makoto Figure",
       "price": 340,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 21,
@@ -512,7 +512,7 @@
       "franchise": 9,
       "name": "Kogami Figure",
       "price": 270,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 22,
@@ -521,7 +521,7 @@
       "franchise": 10,
       "name": "Gojo Figure",
       "price": 320,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 23,
@@ -530,7 +530,7 @@
       "franchise": 11,
       "name": "Okabe Figure",
       "price": 290,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 24,
@@ -539,7 +539,7 @@
       "franchise": 0,
       "name": "Jeans Rock Album",
       "price": 290,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 25,
@@ -548,7 +548,7 @@
       "franchise": 1,
       "name": "Twice Pop Hits",
       "price": 380,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 26,
@@ -557,7 +557,7 @@
       "franchise": 2,
       "name": "Red Velvet Dance Party",
       "price": 270,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 27,
@@ -566,7 +566,7 @@
       "franchise": 3,
       "name": "SERA FIM Electrify",
       "price": 300,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 28,
@@ -575,7 +575,7 @@
       "franchise": 4,
       "name": "ITZY Groove Jam",
       "price": 350,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 29,
@@ -584,7 +584,7 @@
       "franchise": 5,
       "name": "AESPA Synth Odyssey",
       "price": 320,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 30,
@@ -593,7 +593,7 @@
       "franchise": 6,
       "name": "LOONA Dreamland",
       "price": 280,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 31,
@@ -602,7 +602,7 @@
       "franchise": 7,
       "name": "(G)-IDLE Rhythm Pulse",
       "price": 310,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 32,
@@ -611,7 +611,7 @@
       "franchise": 8,
       "name": "GFriend Harmony Echo",
       "price": 340,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 33,
@@ -620,7 +620,7 @@
       "franchise": 9,
       "name": "IZ*ONE Colorful Dreams",
       "price": 270,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 34,
@@ -629,7 +629,7 @@
       "franchise": 10,
       "name": "IVE Pop Fusion",
       "price": 320,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 35,
@@ -638,7 +638,7 @@
       "franchise": 11,
       "name": "STAYC Fresh Beat",
       "price": 290,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 36,
@@ -647,7 +647,7 @@
       "franchise": 0,
       "name": "BTS Dynamite Album",
       "price": 290,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 37,
@@ -656,7 +656,7 @@
       "franchise": 1,
       "name": "NCT Neo Zone",
       "price": 380,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 38,
@@ -665,7 +665,7 @@
       "franchise": 2,
       "name": "STRAY KIDS Go Live",
       "price": 270,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 39,
@@ -674,7 +674,7 @@
       "franchise": 3,
       "name": "ENHYPEN Border: Day One",
       "price": 300,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 40,
@@ -683,7 +683,7 @@
       "franchise": 4,
       "name": "TXT The Dream Chapter: Eternity",
       "price": 350,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 41,
@@ -692,7 +692,7 @@
       "franchise": 5,
       "name": "TREASURE The First Step: Chapter One",
       "price": 320,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 42,
@@ -701,7 +701,7 @@
       "franchise": 6,
       "name": "ATEEZ Fever Part 1",
       "price": 280,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 43,
@@ -710,7 +710,7 @@
       "franchise": 7,
       "name": "Seventeen An Ode",
       "price": 310,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 44,
@@ -719,7 +719,7 @@
       "franchise": 8,
       "name": "THE BOYZ Reveal",
       "price": 340,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 45,
@@ -728,7 +728,7 @@
       "franchise": 9,
       "name": "EXO Obsession",
       "price": 270,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 46,
@@ -737,7 +737,7 @@
       "franchise": 10,
       "name": "SHINee Don't Call Me",
       "price": 320,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 47,
@@ -746,7 +746,7 @@
       "franchise": 0,
       "name": "Naruto volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 48,
@@ -755,7 +755,7 @@
       "franchise": 0,
       "name": "One Piece volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 49,
@@ -764,7 +764,7 @@
       "franchise": 0,
       "name": "Dragon Ball volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 50,
@@ -773,7 +773,7 @@
       "franchise": 1,
       "name": "Pride and Prejudice volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 51,
@@ -782,7 +782,7 @@
       "franchise": 1,
       "name": "Romeo and Juliet volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 52,
@@ -791,7 +791,7 @@
       "franchise": 1,
       "name": "The Notebook volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 53,
@@ -800,7 +800,7 @@
       "franchise": 2,
       "name": "Given volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 54,
@@ -809,7 +809,7 @@
       "franchise": 2,
       "name": "Junjou Romantica volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 55,
@@ -818,7 +818,7 @@
       "franchise": 2,
       "name": "Gravitation volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 56,
@@ -827,7 +827,7 @@
       "franchise": 3,
       "name": "March Comes in Like a Lion volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 57,
@@ -836,7 +836,7 @@
       "franchise": 3,
       "name": "My Youth Romantic Comedy Is Wrong, As I Expected volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 58,
@@ -845,7 +845,7 @@
       "franchise": 3,
       "name": "March Comes in Like a Lion volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 59,
@@ -854,7 +854,7 @@
       "franchise": 3,
       "name": "Barakamon volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 60,
@@ -863,7 +863,7 @@
       "franchise": 4,
       "name": "Attack on Titan volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 61,
@@ -872,7 +872,7 @@
       "franchise": 4,
       "name": "Fullmetal Alchemist volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 62,
@@ -881,7 +881,7 @@
       "franchise": 4,
       "name": "The Rising of the Shield Hero volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 63,
@@ -890,7 +890,7 @@
       "franchise": 5,
       "name": "Steins;Gate volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 64,
@@ -899,7 +899,7 @@
       "franchise": 5,
       "name": "Cowboy Bebop volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 65,
@@ -908,7 +908,7 @@
       "franchise": 5,
       "name": "Ghost in the Shell volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 66,
@@ -917,7 +917,7 @@
       "franchise": 6,
       "name": "Tokyo Ghoul volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 67,
@@ -926,7 +926,7 @@
       "franchise": 6,
       "name": "Parasyte volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 68,
@@ -935,7 +935,7 @@
       "franchise": 6,
       "name": "Another volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 69,
@@ -944,7 +944,7 @@
       "franchise": 7,
       "name": "High School DxD volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 70,
@@ -953,7 +953,7 @@
       "franchise": 7,
       "name": "The Quintessential Quintuplets volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 71,
@@ -962,7 +962,7 @@
       "franchise": 7,
       "name": "Monster Musume volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 72,
@@ -971,7 +971,7 @@
       "franchise": 8,
       "name": "Gintama volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 73,
@@ -980,7 +980,7 @@
       "franchise": 8,
       "name": "One Punch Man volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 74,
@@ -989,7 +989,7 @@
       "franchise": 8,
       "name": "The Devil Is a Part-Timer! volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 75,
@@ -998,7 +998,7 @@
       "franchise": 9,
       "name": "Haikyuu!! volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 76,
@@ -1007,7 +1007,7 @@
       "franchise": 9,
       "name": "Kuroko's Basketball volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 77,
@@ -1016,7 +1016,7 @@
       "franchise": 9,
       "name": "Ace of Diamond volumen 1",
       "price": 30,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 78,
@@ -1025,7 +1025,7 @@
       "franchise": 0,
       "name": "The Ravages of Time volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 79,
@@ -1034,7 +1034,7 @@
       "franchise": 0,
       "name": "Kingdom volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 80,
@@ -1043,7 +1043,7 @@
       "franchise": 0,
       "name": "The King's Avatar volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 81,
@@ -1052,7 +1052,7 @@
       "franchise": 1,
       "name": "My Dear Cold-Blooded King volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 82,
@@ -1061,7 +1061,7 @@
       "franchise": 1,
       "name": "Age Matters volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 83,
@@ -1070,7 +1070,7 @@
       "franchise": 1,
       "name": "Lore Olympus volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 84,
@@ -1079,7 +1079,7 @@
       "franchise": 2,
       "name": "The Beginning After The End volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 85,
@@ -1088,7 +1088,7 @@
       "franchise": 2,
       "name": "Tower of God volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 86,
@@ -1097,7 +1097,7 @@
       "franchise": 2,
       "name": "Noblesse volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 87,
@@ -1106,7 +1106,7 @@
       "franchise": 3,
       "name": "The Breaker volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 88,
@@ -1115,7 +1115,7 @@
       "franchise": 3,
       "name": "Feng Shen Ji volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 89,
@@ -1124,7 +1124,7 @@
       "franchise": 3,
       "name": "Gosu volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 90,
@@ -1133,7 +1133,7 @@
       "franchise": 4,
       "name": "The God of High School volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 91,
@@ -1142,7 +1142,7 @@
       "franchise": 4,
       "name": "Tales of Demons and Gods volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 92,
@@ -1151,7 +1151,7 @@
       "franchise": 4,
       "name": "Peerless Dad volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 93,
@@ -1160,7 +1160,7 @@
       "franchise": 5,
       "name": "Cheese in the Trap volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 94,
@@ -1169,7 +1169,7 @@
       "franchise": 5,
       "name": "Your Throne volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 95,
@@ -1178,7 +1178,7 @@
       "franchise": 5,
       "name": "Winter Woods volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 96,
@@ -1187,7 +1187,7 @@
       "franchise": 6,
       "name": "Battle Through the Heavens volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 97,
@@ -1196,7 +1196,7 @@
       "franchise": 6,
       "name": "The Legendary Moonlight Sculptor volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 98,
@@ -1205,7 +1205,7 @@
       "franchise": 6,
       "name": "Solo Leveling volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 99,
@@ -1214,7 +1214,7 @@
       "franchise": 7,
       "name": "Noblesse volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 100,
@@ -1223,7 +1223,7 @@
       "franchise": 7,
       "name": "The Gamer volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     },
     {
       "id": 101,
@@ -1232,7 +1232,7 @@
       "franchise": 7,
       "name": "Tales of the Unusual volumen 1",
       "price": 24,
-      "image": "default.png"
+      "image": "src/static/images/naruto-figure.png"
     }
   ],
   "paymentMethods": [

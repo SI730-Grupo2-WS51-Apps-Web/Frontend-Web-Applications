@@ -1,3 +1,7 @@
+<script>
+
+</script>
+
 <template>
     <section class="relative w-full h-[50vh] bg-no-repeat bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('src/static/images/bg-seto-kaiba.svg');">
       <div class="content-wrapper">
@@ -1743,7 +1747,7 @@ video {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: 1rem; /* Ajusta el espacio interior según tus preferencias */
+  padding: 0rem; /* Ajusta el espacio interior según tus preferencias */
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Alinea el contenido hacia arriba */

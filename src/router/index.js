@@ -1,5 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import ProductListView from '../views/ProductsView.vue';
+import ProductView from '../views/ProductDetailsView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,9 +25,22 @@ const router = createRouter({
       component: () => import('../account/components/login.component.vue')
     },
     {
+      path: "/products",
+      name: "product-list",
+      component: ProductListView
+    },
+    {
+      path: "/products/:id",
+      name: "product-detail",
+      component: ProductView
+    },
+    {
       path: '/account',
       name: 'account',
       component: () => import('../account/components/account.component.vue')
+    },
+    {
+      path: '/login'
     },
     {
       path: '/facebook',
