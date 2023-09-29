@@ -51,7 +51,8 @@ export default {
   },
   created() {
     this.userInfo = accountService.methods.watchUser(this.getUserInfo)
-    stylesService.methods.watchDarkMode(this.getMode);
+    this.isDarkMode = stylesService.methods.watchDarkMode(this.getMode);
+    this.currentMode = stylesService.methods.getCurrentMode();
   },
   watch: {
     openClicked:{

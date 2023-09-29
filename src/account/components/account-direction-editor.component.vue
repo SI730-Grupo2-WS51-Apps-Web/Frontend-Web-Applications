@@ -12,6 +12,7 @@ export default {
       if(newUserInfo !== undefined && newUserInfo !== null && newUserInfo){
         this.userInfo = newUserInfo;
         if(!this.isUserLogged) this.isUserLogged=true;
+        this.currentMode = stylesService.methods.getCurrentMode()
       }
       else{
         if(this.isUserLogged) this.isUserLogged=false;
@@ -82,7 +83,8 @@ export default {
   created() {
     this.userInfo = accountService.methods.watchUser(this.getUserInfo)
     this.isUserLogged = !!this.userInfo;
-    stylesService.methods.watchDarkMode(this.getMode);
+    this.isDarkMode = stylesService.methods.watchDarkMode(this.getMode);
+    this.currentMode = stylesService.methods.getCurrentMode();
     this.getDepartments();
   },
 }

@@ -28,7 +28,8 @@ export default {
   },
   created() {
     this.loadFooterInfo();
-    stylesService.methods.watchDarkMode(this.getMode);
+    this.isDarkMode = stylesService.methods.watchDarkMode(this.getMode);
+    this.currentMode = stylesService.methods.getCurrentMode();
   }
 }
 </script>
